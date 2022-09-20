@@ -1,0 +1,86 @@
+|MiniCPU
+COUNTER[0] <= SynchronousCounter:inst.Q[0]
+COUNTER[1] <= SynchronousCounter:inst.Q[1]
+COUNTER[2] <= SynchronousCounter:inst.Q[2]
+COUNTER[3] <= SynchronousCounter:inst.Q[3]
+COUNTER[4] <= SynchronousCounter:inst.Q[4]
+COUNTER[5] <= SynchronousCounter:inst.Q[5]
+COUNTER[6] <= SynchronousCounter:inst.Q[6]
+COUNTER[7] <= SynchronousCounter:inst.Q[7]
+CLK_FPGA => debouncer:inst2.clk_fpga
+RST_DEBOUNCER => debouncer:inst2.rst_debouncer
+INPUT_CLK => debouncer:inst2.input_key
+CLR_COUNTER => SynchronousCounter:inst.CLR
+
+
+|MiniCPU|SynchronousCounter:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst71.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst3.ACLR
+CLR => inst5.ACLR
+CLR => inst71.ACLR
+CLR => inst7.ACLR
+CLR => inst10.ACLR
+CLR => inst12.ACLR
+CLR => inst14.ACLR
+CLK => inst.CLK
+CLK => inst3.CLK
+CLK => inst5.CLK
+CLK => inst71.CLK
+CLK => inst7.CLK
+CLK => inst10.CLK
+CLK => inst12.CLK
+CLK => inst14.CLK
+
+
+|MiniCPU|debouncer:inst2
+clk_fpga => counter[0].CLK
+clk_fpga => counter[1].CLK
+clk_fpga => counter[2].CLK
+clk_fpga => counter[3].CLK
+clk_fpga => counter[4].CLK
+clk_fpga => counter[5].CLK
+clk_fpga => counter[6].CLK
+clk_fpga => counter[7].CLK
+clk_fpga => counter[8].CLK
+clk_fpga => counter[9].CLK
+clk_fpga => counter[10].CLK
+clk_fpga => counter[11].CLK
+clk_fpga => counter[12].CLK
+clk_fpga => counter[13].CLK
+clk_fpga => counter[14].CLK
+clk_fpga => counter[15].CLK
+clk_fpga => out_key~reg0.CLK
+clk_fpga => intermediate.CLK
+rst_debouncer => counter[0].ACLR
+rst_debouncer => counter[1].ACLR
+rst_debouncer => counter[2].ACLR
+rst_debouncer => counter[3].ACLR
+rst_debouncer => counter[4].ACLR
+rst_debouncer => counter[5].ACLR
+rst_debouncer => counter[6].ACLR
+rst_debouncer => counter[7].ACLR
+rst_debouncer => counter[8].ACLR
+rst_debouncer => counter[9].ACLR
+rst_debouncer => counter[10].ACLR
+rst_debouncer => counter[11].ACLR
+rst_debouncer => counter[12].ACLR
+rst_debouncer => counter[13].ACLR
+rst_debouncer => counter[14].ACLR
+rst_debouncer => counter[15].ACLR
+rst_debouncer => out_key~reg0.ALOAD
+rst_debouncer => intermediate.ALOAD
+input_key => always0.IN1
+input_key => out_key~reg0.ADATA
+input_key => intermediate.ADATA
+input_key => intermediate.DATAIN
+out_key <= out_key~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

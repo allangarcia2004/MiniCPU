@@ -1,0 +1,181 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'RST_DEBOUNCER'
+Slack : -4.091
+TNS   : -51.091
+
+Type  : Slow 1100mV 85C Model Setup 'INPUT_CLK'
+Slack : -3.319
+TNS   : -41.566
+
+Type  : Slow 1100mV 85C Model Setup 'CLK_FPGA'
+Slack : -3.295
+TNS   : -55.119
+
+Type  : Slow 1100mV 85C Model Hold 'CLK_FPGA'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'INPUT_CLK'
+Slack : 0.877
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'RST_DEBOUNCER'
+Slack : 1.295
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'CLK_FPGA'
+Slack : -2.476
+TNS   : -44.342
+
+Type  : Slow 1100mV 85C Model Removal 'CLK_FPGA'
+Slack : 1.150
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -0.538
+TNS   : -14.036
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'INPUT_CLK'
+Slack : -0.538
+TNS   : -13.766
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RST_DEBOUNCER'
+Slack : -0.538
+TNS   : -13.571
+
+Type  : Slow 1100mV 0C Model Setup 'RST_DEBOUNCER'
+Slack : -3.996
+TNS   : -50.719
+
+Type  : Slow 1100mV 0C Model Setup 'INPUT_CLK'
+Slack : -3.405
+TNS   : -41.744
+
+Type  : Slow 1100mV 0C Model Setup 'CLK_FPGA'
+Slack : -3.100
+TNS   : -52.729
+
+Type  : Slow 1100mV 0C Model Hold 'CLK_FPGA'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'INPUT_CLK'
+Slack : 0.791
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'RST_DEBOUNCER'
+Slack : 1.081
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'CLK_FPGA'
+Slack : -2.225
+TNS   : -39.874
+
+Type  : Slow 1100mV 0C Model Removal 'CLK_FPGA'
+Slack : 0.890
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'INPUT_CLK'
+Slack : -0.568
+TNS   : -14.294
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -0.538
+TNS   : -14.076
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RST_DEBOUNCER'
+Slack : -0.538
+TNS   : -13.735
+
+Type  : Fast 1100mV 85C Model Setup 'RST_DEBOUNCER'
+Slack : -2.613
+TNS   : -23.387
+
+Type  : Fast 1100mV 85C Model Setup 'CLK_FPGA'
+Slack : -1.993
+TNS   : -29.258
+
+Type  : Fast 1100mV 85C Model Setup 'INPUT_CLK'
+Slack : -1.456
+TNS   : -17.745
+
+Type  : Fast 1100mV 85C Model Hold 'CLK_FPGA'
+Slack : 0.017
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'INPUT_CLK'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'RST_DEBOUNCER'
+Slack : 0.505
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'CLK_FPGA'
+Slack : -1.436
+TNS   : -25.698
+
+Type  : Fast 1100mV 85C Model Removal 'CLK_FPGA'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'INPUT_CLK'
+Slack : -0.496
+TNS   : -8.363
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RST_DEBOUNCER'
+Slack : -0.463
+TNS   : -7.485
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -0.098
+TNS   : -1.756
+
+Type  : Fast 1100mV 0C Model Setup 'RST_DEBOUNCER'
+Slack : -2.340
+TNS   : -20.667
+
+Type  : Fast 1100mV 0C Model Setup 'CLK_FPGA'
+Slack : -1.746
+TNS   : -26.023
+
+Type  : Fast 1100mV 0C Model Setup 'INPUT_CLK'
+Slack : -1.233
+TNS   : -15.077
+
+Type  : Fast 1100mV 0C Model Hold 'CLK_FPGA'
+Slack : -0.080
+TNS   : -0.148
+
+Type  : Fast 1100mV 0C Model Hold 'INPUT_CLK'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'RST_DEBOUNCER'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'CLK_FPGA'
+Slack : -1.213
+TNS   : -21.712
+
+Type  : Fast 1100mV 0C Model Removal 'CLK_FPGA'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'INPUT_CLK'
+Slack : -0.466
+TNS   : -7.663
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RST_DEBOUNCER'
+Slack : -0.441
+TNS   : -6.999
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK_FPGA'
+Slack : -0.100
+TNS   : -1.778
+
+------------------------------------------------------------

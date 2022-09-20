@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "COUNTER[7]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[6]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[5]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTER[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_COUNTER",
+					"strict" : false
+				},
+				{
+					"name" : "RST_DEBOUNCER",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_FPGA",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
