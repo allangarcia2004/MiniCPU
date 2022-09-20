@@ -1,0 +1,27 @@
+|SynchronousCounter
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst71.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst3.ACLR
+CLR => inst5.ACLR
+CLR => inst71.ACLR
+CLR => inst7.ACLR
+CLR => inst10.ACLR
+CLR => inst12.ACLR
+CLR => inst14.ACLR
+CLK => inst.CLK
+CLK => inst3.CLK
+CLK => inst5.CLK
+CLK => inst71.CLK
+CLK => inst7.CLK
+CLK => inst10.CLK
+CLK => inst12.CLK
+CLK => inst14.CLK
+
+
