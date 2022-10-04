@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 360 160 528 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "D[3..0]" (rect 5 0 40 12)(font "Arial" ))
+	(text "D[3..0]" (rect 5 0 39 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 360 208 528 224)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 360 184 528 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "LOAD" (rect 5 0 35 12)(font "Arial" ))
+	(text "LOAD" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -330,7 +330,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 496 472)
 )
 (connector
-	(text "CLR" (rect 443 568 463 585)(font "Intel Clear" ))
+	(text "CLRN" (rect 443 568 470 585)(font "Intel Clear" ))
 	(pt 464 584)
 	(pt 432 584)
 )
@@ -344,7 +344,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 672 472)
 )
 (connector
-	(text "CLR" (rect 619 568 639 585)(font "Intel Clear" ))
+	(text "CLRN" (rect 619 568 646 585)(font "Intel Clear" ))
 	(pt 640 584)
 	(pt 608 584)
 )
@@ -391,7 +391,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 496 312)
 )
 (connector
-	(text "CLR" (rect 443 408 463 425)(font "Intel Clear" ))
+	(text "CLRN" (rect 443 408 470 425)(font "Intel Clear" ))
 	(pt 464 424)
 	(pt 432 424)
 )
@@ -420,7 +420,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 672 312)
 )
 (connector
-	(text "CLR" (rect 619 408 639 425)(font "Intel Clear" ))
+	(text "CLRN" (rect 619 408 646 425)(font "Intel Clear" ))
 	(pt 640 424)
 	(pt 608 424)
 )

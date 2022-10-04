@@ -1,27 +1,27 @@
 |ArithmeticLogicUnit
-S[0] <= MUX_2x1:inst1.result[0]
-S[1] <= MUX_2x1:inst1.result[1]
-S[2] <= MUX_2x1:inst1.result[2]
-S[3] <= MUX_2x1:inst1.result[3]
-Op[0] => AdderSubtractor:inst.Op
-Op[0] => DividerMultiplier:inst2.Op
-Op[1] => MUX_2x1:inst1.sel
+S[0] <= MUX_2x1:inst3.result[0]
+S[1] <= MUX_2x1:inst3.result[1]
+S[2] <= MUX_2x1:inst3.result[2]
+S[3] <= MUX_2x1:inst3.result[3]
+Op[0] => AdderSubtractor:inst2.Op
+Op[0] => DividerMultiplier:inst.Op
+Op[1] => MUX_2x1:inst3.sel
 Op[2] => ~NO_FANOUT~
-A[0] => AdderSubtractor:inst.A[0]
-A[0] => DividerMultiplier:inst2.A[0]
-A[1] => AdderSubtractor:inst.A[1]
-A[1] => DividerMultiplier:inst2.A[1]
-A[2] => AdderSubtractor:inst.A[2]
-A[2] => DividerMultiplier:inst2.A[2]
-A[3] => AdderSubtractor:inst.A[3]
-A[3] => DividerMultiplier:inst2.A[3]
-B[0] => AdderSubtractor:inst.B[0]
-B[1] => AdderSubtractor:inst.B[1]
-B[2] => AdderSubtractor:inst.B[2]
-B[3] => AdderSubtractor:inst.B[3]
+A[0] => AdderSubtractor:inst2.A[0]
+A[0] => DividerMultiplier:inst.A[0]
+A[1] => AdderSubtractor:inst2.A[1]
+A[1] => DividerMultiplier:inst.A[1]
+A[2] => AdderSubtractor:inst2.A[2]
+A[2] => DividerMultiplier:inst.A[2]
+A[3] => AdderSubtractor:inst2.A[3]
+A[3] => DividerMultiplier:inst.A[3]
+B[0] => AdderSubtractor:inst2.B[0]
+B[1] => AdderSubtractor:inst2.B[1]
+B[2] => AdderSubtractor:inst2.B[2]
+B[3] => AdderSubtractor:inst2.B[3]
 
 
-|ArithmeticLogicUnit|MUX_2x1:inst1
+|ArithmeticLogicUnit|MUX_2x1:inst3
 data0x[0] => sub_wire1[0].IN1
 data0x[1] => sub_wire1[1].IN1
 data0x[2] => sub_wire1[2].IN1
@@ -37,7 +37,7 @@ result[2] <= lpm_mux:LPM_MUX_component.result
 result[3] <= lpm_mux:LPM_MUX_component.result
 
 
-|ArithmeticLogicUnit|MUX_2x1:inst1|lpm_mux:LPM_MUX_component
+|ArithmeticLogicUnit|MUX_2x1:inst3|lpm_mux:LPM_MUX_component
 data[0][0] => mux_sjc:auto_generated.data[0]
 data[0][1] => mux_sjc:auto_generated.data[1]
 data[0][2] => mux_sjc:auto_generated.data[2]
@@ -56,7 +56,7 @@ result[2] <= mux_sjc:auto_generated.result[2]
 result[3] <= mux_sjc:auto_generated.result[3]
 
 
-|ArithmeticLogicUnit|MUX_2x1:inst1|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated
+|ArithmeticLogicUnit|MUX_2x1:inst3|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1
@@ -79,26 +79,26 @@ sel[0] => l1_w3_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|ArithmeticLogicUnit|AdderSubtractor:inst
+|ArithmeticLogicUnit|AdderSubtractor:inst2
 S[0] <= 1BitAdderSubtractor:inst.S
-S[1] <= 1BitAdderSubtractor:inst3.S
-S[2] <= 1BitAdderSubtractor:inst4.S
-S[3] <= 1BitAdderSubtractor:inst5.S
+S[1] <= 1BitAdderSubtractor:inst2.S
+S[2] <= 1BitAdderSubtractor:inst3.S
+S[3] <= 1BitAdderSubtractor:inst4.S
 A[0] => 1BitAdderSubtractor:inst.A
-A[1] => 1BitAdderSubtractor:inst3.A
-A[2] => 1BitAdderSubtractor:inst4.A
-A[3] => 1BitAdderSubtractor:inst5.A
+A[1] => 1BitAdderSubtractor:inst2.A
+A[2] => 1BitAdderSubtractor:inst3.A
+A[3] => 1BitAdderSubtractor:inst4.A
 B[0] => 1BitAdderSubtractor:inst.B
-B[1] => 1BitAdderSubtractor:inst3.B
-B[2] => 1BitAdderSubtractor:inst4.B
-B[3] => 1BitAdderSubtractor:inst5.B
+B[1] => 1BitAdderSubtractor:inst2.B
+B[2] => 1BitAdderSubtractor:inst3.B
+B[3] => 1BitAdderSubtractor:inst4.B
 Op => 1BitAdderSubtractor:inst.Op
+Op => 1BitAdderSubtractor:inst2.Op
 Op => 1BitAdderSubtractor:inst3.Op
 Op => 1BitAdderSubtractor:inst4.Op
-Op => 1BitAdderSubtractor:inst5.Op
 
 
-|ArithmeticLogicUnit|AdderSubtractor:inst|1BitAdderSubtractor:inst
+|ArithmeticLogicUnit|AdderSubtractor:inst2|1BitAdderSubtractor:inst
 S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst6.IN0
@@ -112,7 +112,7 @@ C_out <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 Op => inst6.IN1
 
 
-|ArithmeticLogicUnit|AdderSubtractor:inst|1BitAdderSubtractor:inst3
+|ArithmeticLogicUnit|AdderSubtractor:inst2|1BitAdderSubtractor:inst2
 S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst6.IN0
@@ -126,7 +126,7 @@ C_out <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 Op => inst6.IN1
 
 
-|ArithmeticLogicUnit|AdderSubtractor:inst|1BitAdderSubtractor:inst4
+|ArithmeticLogicUnit|AdderSubtractor:inst2|1BitAdderSubtractor:inst3
 S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst6.IN0
@@ -140,7 +140,7 @@ C_out <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 Op => inst6.IN1
 
 
-|ArithmeticLogicUnit|AdderSubtractor:inst|1BitAdderSubtractor:inst5
+|ArithmeticLogicUnit|AdderSubtractor:inst2|1BitAdderSubtractor:inst4
 S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst6.IN0
@@ -154,7 +154,7 @@ C_out <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 Op => inst6.IN1
 
 
-|ArithmeticLogicUnit|DividerMultiplier:inst2
+|ArithmeticLogicUnit|DividerMultiplier:inst
 S[0] <= MUX_2x1:inst1.result[0]
 S[1] <= MUX_2x1:inst1.result[1]
 S[2] <= MUX_2x1:inst1.result[2]
@@ -168,7 +168,7 @@ A[3] => MUX_2x1:inst1.data1x[2]
 Op => ~NO_FANOUT~
 
 
-|ArithmeticLogicUnit|DividerMultiplier:inst2|MUX_2x1:inst1
+|ArithmeticLogicUnit|DividerMultiplier:inst|MUX_2x1:inst1
 data0x[0] => sub_wire1[0].IN1
 data0x[1] => sub_wire1[1].IN1
 data0x[2] => sub_wire1[2].IN1
@@ -184,7 +184,7 @@ result[2] <= lpm_mux:LPM_MUX_component.result
 result[3] <= lpm_mux:LPM_MUX_component.result
 
 
-|ArithmeticLogicUnit|DividerMultiplier:inst2|MUX_2x1:inst1|lpm_mux:LPM_MUX_component
+|ArithmeticLogicUnit|DividerMultiplier:inst|MUX_2x1:inst1|lpm_mux:LPM_MUX_component
 data[0][0] => mux_sjc:auto_generated.data[0]
 data[0][1] => mux_sjc:auto_generated.data[1]
 data[0][2] => mux_sjc:auto_generated.data[2]
@@ -203,7 +203,7 @@ result[2] <= mux_sjc:auto_generated.result[2]
 result[3] <= mux_sjc:auto_generated.result[3]
 
 
-|ArithmeticLogicUnit|DividerMultiplier:inst2|MUX_2x1:inst1|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated
+|ArithmeticLogicUnit|DividerMultiplier:inst|MUX_2x1:inst1|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated
 data[0] => l1_w0_n0_mux_dataout.IN1
 data[1] => l1_w1_n0_mux_dataout.IN1
 data[2] => l1_w2_n0_mux_dataout.IN1

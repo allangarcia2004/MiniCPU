@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "J[1]",
+					"strict" : false
+				},
+				{
+					"name" : "J[0]",
+					"strict" : false
+				},
+				{
+					"name" : "JN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "JN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[10]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

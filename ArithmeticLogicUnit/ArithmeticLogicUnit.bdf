@@ -85,9 +85,38 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
+	(rect 456 352 584 448)
+	(text "DividerMultiplier" (rect 5 0 105 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "A[3..0]" (rect 21 27 59 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Op" (rect 0 0 17 19)(font "Intel Clear" (font_size 8)))
+		(text "Op" (rect 21 43 38 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "S[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "S[3..0]" (rect 69 27 107 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 80))
+	)
+)
+(symbol
 	(rect 456 512 584 608)
 	(text "AdderSubtractor" (rect 5 0 104 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(text "inst2" (rect 8 75 30 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -123,7 +152,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 664 416 808 496)
 	(text "MUX_2x1" (rect 46 0 110 16)(font "Arial" (font_size 10)))
-	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "inst3" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
 		(pt 0 40)
 		(input)
@@ -165,35 +194,6 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 0)(pt 0 0))
 		(line (pt 0 0)(pt 0 0))
 		(line (pt 0 0)(pt 0 0))
-	)
-)
-(symbol
-	(rect 456 352 584 448)
-	(text "DividerMultiplier" (rect 5 0 105 19)(font "Intel Clear" (font_size 8)))
-	(text "inst2" (rect 8 75 30 92)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "A[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "A[3..0]" (rect 21 27 59 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "Op" (rect 0 0 17 19)(font "Intel Clear" (font_size 8)))
-		(text "Op" (rect 21 43 38 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 128 32)
-		(output)
-		(text "S[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "S[3..0]" (rect 69 27 107 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 128 32)(pt 112 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 112 80))
 	)
 )
 (connector

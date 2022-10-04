@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/TEMP/Desktop/allan/MiniCPU/ControlUnit/simulation/qsim
+vControlUnit
+Z1 !s110 1664910488
+!i10b 1
+!s100 0z5M@FdF]?P9L5eI<HU=C2
+IM4OzHZF30_bNY2<dVYL8F0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1664910485
+8ControlUnit.vo
+FControlUnit.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1664910487.000000
+!s107 ControlUnit.vo|
+!s90 -work|work|ControlUnit.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@control@unit
+vControlUnit_vlg_vec_tst
+R1
+!i10b 1
+!s100 Qoa;3N8Y^4E]Le2bGG3Mc3
+In>h4VT??=K;CBUi[[RfP11
+R2
+R0
+w1664910484
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1664910488.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@control@unit_vlg_vec_tst

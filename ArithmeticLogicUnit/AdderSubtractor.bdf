@@ -85,6 +85,23 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
+	(rect 232 448 264 480)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
 	(rect 376 376 488 504)
 	(text "1BitAdderSubtractor" (rect 5 0 128 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
@@ -135,26 +152,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 232 448 264 480)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst1" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
 	(rect 632 376 744 504)
 	(text "1BitAdderSubtractor" (rect 5 0 128 19)(font "Intel Clear" (font_size 8)))
-	(text "inst3" (rect 8 107 30 124)(font "Intel Clear" ))
+	(text "inst2" (rect 8 107 30 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -204,7 +204,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 888 376 1000 504)
 	(text "1BitAdderSubtractor" (rect 5 0 128 19)(font "Intel Clear" (font_size 8)))
-	(text "inst4" (rect 8 107 30 124)(font "Intel Clear" ))
+	(text "inst3" (rect 8 107 30 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -254,7 +254,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1144 376 1256 504)
 	(text "1BitAdderSubtractor" (rect 5 0 128 19)(font "Intel Clear" (font_size 8)))
-	(text "inst5" (rect 8 107 30 124)(font "Intel Clear" ))
+	(text "inst4" (rect 8 107 30 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
