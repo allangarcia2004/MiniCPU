@@ -327,11 +327,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 464 360)
 )
 (connector
-	(text "T" (rect 344 344 349 361)(font "Intel Clear" ))
-	(pt 368 360)
-	(pt 336 360)
-)
-(connector
 	(pt 304 456)
 	(pt 288 456)
 )
@@ -369,4 +364,9 @@ https://fpgasoftware.intel.com/eula.
 	(text "CLRN" (rect 272 408 299 425)(font "Intel Clear" ))
 	(pt 296 424)
 	(pt 264 424)
+)
+(connector
+	(text "PREV" (rect 344 344 371 361)(font "Intel Clear" ))
+	(pt 368 360)
+	(pt 336 360)
 )

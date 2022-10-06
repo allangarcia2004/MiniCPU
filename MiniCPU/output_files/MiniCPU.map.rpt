@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniCPU
-Thu Oct  6 14:04:10 2022
+Thu Oct  6 14:10:51 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -10,7 +10,22 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated
+ 12. Parameter Settings for User Entity Instance: ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component
+ 13. Parameter Settings for User Entity Instance: ROM_16x256:inst1|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: debouncer:inst2
+ 15. Parameter Settings for User Entity Instance: ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component
+ 16. Parameter Settings for User Entity Instance: ArithmeticLogicUnit:inst11|DividerMultiplier:inst|MUX_2x1:inst1|lpm_mux:LPM_MUX_component
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +49,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Oct  6 14:04:10 2022           ;
-; Quartus Prime Version       ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
-; Revision Name               ; MiniCPU                                     ;
-; Top-level Entity Name       ; MiniCPU                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct  6 14:10:51 2022       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                   ; MiniCPU                                     ;
+; Top-level Entity Name           ; MiniCPU                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 26                                          ;
+; Total pins                      ; 40                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 4,096                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -60,6 +80,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
 ; Top-level entity name                                                           ; MiniCPU            ; MiniCPU            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; 4                  ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -148,11 +169,333 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
+; MiniCPU.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/MiniCPU.bdf                         ;         ;
+; synchronouscounter.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/synchronouscounter/synchronouscounter.bdf   ;         ;
+; overwritabletff.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/synchronouscounter/overwritabletff.bdf      ;         ;
+; controlunit.bdf                  ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/controlunit.bdf                 ;         ;
+; mux_4x4.v                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v                       ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc               ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; db/mux_vjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/mux_vjc.tdf                      ;         ;
+; rom_16x256.v                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/13731222/Desktop/allan/MiniCPU/memory/rom_16x256.v                         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_ddg1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/altsyncram_ddg1.tdf              ;         ;
+; debouncer.v                      ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v                       ;         ;
+; 4bitregister.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/4bitregister/4bitregister.bdf               ;         ;
+; arithmeticlogicunit.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/arithmeticlogicunit.bdf ;         ;
+; mux_2x1.v                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/mux_2x1.v               ;         ;
+; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/mux_sjc.tdf                      ;         ;
+; addersubtractor.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/addersubtractor.bdf     ;         ;
+; 1bitaddersubtractor.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/1bitaddersubtractor.bdf ;         ;
+; dividermultiplier.bdf            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/dividermultiplier.bdf   ;         ;
+; bus_7segmentsdisplay.bdf         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/7segmentsdisplay/bus_7segmentsdisplay.bdf   ;         ;
+; 7segmentdisplay.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/7segmentsdisplay/7segmentdisplay.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 43                        ;
+;                                             ;                           ;
+; Combinational ALUT usage for logic          ; 83                        ;
+;     -- 7 input functions                    ; 0                         ;
+;     -- 6 input functions                    ; 3                         ;
+;     -- 5 input functions                    ; 4                         ;
+;     -- 4 input functions                    ; 42                        ;
+;     -- <=3 input functions                  ; 34                        ;
+;                                             ;                           ;
+; Dedicated logic registers                   ; 26                        ;
+;                                             ;                           ;
+; I/O pins                                    ; 40                        ;
+; Total MLAB memory bits                      ; 0                         ;
+; Total block memory bits                     ; 4096                      ;
+;                                             ;                           ;
+; Total DSP Blocks                            ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; debouncer:inst2|out_key~2 ;
+; Maximum fan-out                             ; 25                        ;
+; Total fan-out                               ; 614                       ;
+; Average fan-out                             ; 3.00                      ;
++---------------------------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Entity Name          ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
+; |MiniCPU                                  ; 83 (0)              ; 26 (0)                    ; 4096              ; 0          ; 40   ; 0            ; |MiniCPU                                                                                 ; MiniCPU              ; work         ;
+;    |BUS_7SegmentsDisplay:inst6A|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6A                                                     ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6A|7SegmentDisplay:inst                                ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst6|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6                                                      ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6|7SegmentDisplay:inst                                 ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst7|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst7                                                      ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst7|7SegmentDisplay:inst                                 ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst8|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst8                                                      ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst8|7SegmentDisplay:inst                                 ; 7SegmentDisplay      ; work         ;
+;    |ROM_16x256:inst1|                     ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1                                                                ; ROM_16x256           ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component                                ; altsyncram           ; work         ;
+;          |altsyncram_ddg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated ; altsyncram_ddg1      ; work         ;
+;    |SynchronousCounter:inst|              ; 29 (5)              ; 8 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst                                                         ; SynchronousCounter   ; work         ;
+;       |OverwritableTFF:inst18|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst18                                  ; OverwritableTFF      ; work         ;
+;       |OverwritableTFF:inst19|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst19                                  ; OverwritableTFF      ; work         ;
+;       |OverwritableTFF:inst1|             ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst1                                   ; OverwritableTFF      ; work         ;
+;       |OverwritableTFF:inst20|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst20                                  ; OverwritableTFF      ; work         ;
+;    |debouncer:inst2|                      ; 26 (26)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|debouncer:inst2                                                                 ; debouncer            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                            ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------+
+; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF           ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------+
+; ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; memory_01.mif ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 26    ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 26    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |MiniCPU|debouncer:inst2|counter[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component ;
++------------------------+-----------+-------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                              ;
++------------------------+-----------+-------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                    ;
+; LPM_WIDTH              ; 4         ; Signed Integer                                                    ;
+; LPM_SIZE               ; 4         ; Signed Integer                                                    ;
+; LPM_WIDTHS             ; 2         ; Signed Integer                                                    ;
+; LPM_PIPELINE           ; 0         ; Untyped                                                           ;
+; CBXI_PARAMETER         ; mux_vjc   ; Untyped                                                           ;
+; DEVICE_FAMILY          ; Cyclone V ; Untyped                                                           ;
++------------------------+-----------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM_16x256:inst1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------+
+; Parameter Name                     ; Value                ; Type                              ;
++------------------------------------+----------------------+-----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                           ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                           ;
+; WIDTH_A                            ; 16                   ; Signed Integer                    ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                    ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WIDTH_B                            ; 1                    ; Untyped                           ;
+; WIDTHAD_B                          ; 1                    ; Untyped                           ;
+; NUMWORDS_B                         ; 1                    ; Untyped                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; INIT_FILE                          ; memory_01.mif        ; Untyped                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                           ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                           ;
+; CBXI_PARAMETER                     ; altsyncram_ddg1      ; Untyped                           ;
++------------------------------------+----------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:inst2 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; DELAY_BITS     ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component ;
++------------------------+-----------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                       ;
++------------------------+-----------+----------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                             ;
+; LPM_WIDTH              ; 4         ; Signed Integer                                                             ;
+; LPM_SIZE               ; 2         ; Signed Integer                                                             ;
+; LPM_WIDTHS             ; 1         ; Signed Integer                                                             ;
+; LPM_PIPELINE           ; 0         ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; mux_sjc   ; Untyped                                                                    ;
+; DEVICE_FAMILY          ; Cyclone V ; Untyped                                                                    ;
++------------------------+-----------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ArithmeticLogicUnit:inst11|DividerMultiplier:inst|MUX_2x1:inst1|lpm_mux:LPM_MUX_component ;
++------------------------+-----------+---------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                              ;
++------------------------+-----------+---------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                    ;
+; LPM_WIDTH              ; 4         ; Signed Integer                                                                                    ;
+; LPM_SIZE               ; 2         ; Signed Integer                                                                                    ;
+; LPM_WIDTHS             ; 1         ; Signed Integer                                                                                    ;
+; LPM_PIPELINE           ; 0         ; Untyped                                                                                           ;
+; CBXI_PARAMETER         ; mux_sjc   ; Untyped                                                                                           ;
+; DEVICE_FAMILY          ; Cyclone V ; Untyped                                                                                           ;
++------------------------+-----------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                             ;
++-------------------------------------------+--------------------------------------------------+
+; Name                                      ; Value                                            ;
++-------------------------------------------+--------------------------------------------------+
+; Number of entity instances                ; 1                                                ;
+; Entity Instance                           ; ROM_16x256:inst1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                              ;
+;     -- WIDTH_A                            ; 16                                               ;
+;     -- NUMWORDS_A                         ; 256                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                     ;
+;     -- WIDTH_B                            ; 1                                                ;
+;     -- NUMWORDS_B                         ; 1                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                        ;
++-------------------------------------------+--------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 26                          ;
+;     CLR               ; 10                          ;
+;     ENA CLR SCLR      ; 16                          ;
+; arriav_lcell_comb     ; 111                         ;
+;     arith             ; 16                          ;
+;         1 data inputs ; 16                          ;
+;     normal            ; 95                          ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 42                          ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 3                           ;
+; boundary_port         ; 40                          ;
+; stratixv_ram_block    ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.45                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,10 +504,9 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Thu Oct  6 14:04:03 2022
+    Info: Processing started: Thu Oct  6 14:10:42 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniCPU -c MiniCPU
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file minicpu.bdf
     Info (12023): Found entity 1: MiniCPU
 Info (12127): Elaborating entity "MiniCPU" for the top level hierarchy
@@ -175,20 +517,106 @@ Warning (275008): Primitive "GND" of instance "inst17" not used
 Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/synchronouscounter/overwritabletff.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: OverwritableTFF
 Info (12128): Elaborating entity "OverwritableTFF" for hierarchy "SynchronousCounter:inst|OverwritableTFF:inst1"
-Warning (275009): Pin "PREV" not connected
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/controlunit/controlunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ControlUnit
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst9"
+Warning (275043): Pin "ULA_OPERAND[3..0]" is missing source
+Warning (275008): Primitive "NOT" of instance "inst14" not used
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/controlunit/mux_4x4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX_4x4 File: C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v Line: 40
+Info (12128): Elaborating entity "MUX_4x4" for hierarchy "ControlUnit:inst9|MUX_4x4:inst5"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v Line: 73
+Info (12130): Elaborated megafunction instantiation "ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v Line: 73
+Info (12133): Instantiated megafunction "ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v Line: 73
+    Info (12134): Parameter "lpm_size" = "4"
+    Info (12134): Parameter "lpm_type" = "LPM_MUX"
+    Info (12134): Parameter "lpm_width" = "4"
+    Info (12134): Parameter "lpm_widths" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_vjc.tdf
+    Info (12023): Found entity 1: mux_vjc File: C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/mux_vjc.tdf Line: 23
+Info (12128): Elaborating entity "mux_vjc" for hierarchy "ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component|mux_vjc:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/memory/rom_16x256.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ROM_16x256 File: C:/Users/13731222/Desktop/allan/MiniCPU/memory/rom_16x256.v Line: 40
+Info (12128): Elaborating entity "ROM_16x256" for hierarchy "ROM_16x256:inst1"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_16x256:inst1|altsyncram:altsyncram_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/memory/rom_16x256.v Line: 82
+Info (12130): Elaborated megafunction instantiation "ROM_16x256:inst1|altsyncram:altsyncram_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/memory/rom_16x256.v Line: 82
+Info (12133): Instantiated megafunction "ROM_16x256:inst1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/13731222/Desktop/allan/MiniCPU/memory/rom_16x256.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "memory_01.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ddg1.tdf
+    Info (12023): Found entity 1: altsyncram_ddg1 File: C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/altsyncram_ddg1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ddg1" for hierarchy "ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/debouncer/debouncer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: debouncer File: C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v Line: 28
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst2"
 Warning (10230): Verilog HDL assignment warning at debouncer.v(71): truncated value with size 32 to match size of target (16) File: C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v Line: 71
-Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/controlunit/controlunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: ControlUnit
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst9"
-Error (275023): Width mismatch in PC_D[3..0] -- source is ""MEM_CONTENTS[9..8]""
-Error (12152): Can't elaborate user hierarchy "ControlUnit:inst9"
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 8 warnings
-    Error: Peak virtual memory: 4777 megabytes
-    Error: Processing ended: Thu Oct  6 14:04:10 2022
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:16
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/4bitregister/4bitregister.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 4BitRegister
+Info (12128): Elaborating entity "4BitRegister" for hierarchy "4BitRegister:inst4"
+Warning (275009): Pin "LOAD" not connected
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/arithmeticlogicunit/arithmeticlogicunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ArithmeticLogicUnit
+Info (12128): Elaborating entity "ArithmeticLogicUnit" for hierarchy "ArithmeticLogicUnit:inst11"
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/arithmeticlogicunit/mux_2x1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX_2x1 File: C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/mux_2x1.v Line: 40
+Info (12128): Elaborating entity "MUX_2x1" for hierarchy "ArithmeticLogicUnit:inst11|MUX_2x1:inst3"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/mux_2x1.v Line: 69
+Info (12130): Elaborated megafunction instantiation "ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/mux_2x1.v Line: 69
+Info (12133): Instantiated megafunction "ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/mux_2x1.v Line: 69
+    Info (12134): Parameter "lpm_size" = "2"
+    Info (12134): Parameter "lpm_type" = "LPM_MUX"
+    Info (12134): Parameter "lpm_width" = "4"
+    Info (12134): Parameter "lpm_widths" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_sjc.tdf
+    Info (12023): Found entity 1: mux_sjc File: C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/mux_sjc.tdf Line: 23
+Info (12128): Elaborating entity "mux_sjc" for hierarchy "ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/arithmeticlogicunit/addersubtractor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: AdderSubtractor
+Info (12128): Elaborating entity "AdderSubtractor" for hierarchy "ArithmeticLogicUnit:inst11|AdderSubtractor:inst2"
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/arithmeticlogicunit/1bitaddersubtractor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 1BitAdderSubtractor
+Info (12128): Elaborating entity "1BitAdderSubtractor" for hierarchy "ArithmeticLogicUnit:inst11|AdderSubtractor:inst2|1BitAdderSubtractor:inst"
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/arithmeticlogicunit/dividermultiplier.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DividerMultiplier
+Info (12128): Elaborating entity "DividerMultiplier" for hierarchy "ArithmeticLogicUnit:inst11|DividerMultiplier:inst"
+Warning (275009): Pin "Op" not connected
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/7segmentsdisplay/bus_7segmentsdisplay.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: BUS_7SegmentsDisplay
+Info (12128): Elaborating entity "BUS_7SegmentsDisplay" for hierarchy "BUS_7SegmentsDisplay:inst8"
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/7segmentsdisplay/7segmentdisplay.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 7SegmentDisplay
+Info (12128): Elaborating entity "7SegmentDisplay" for hierarchy "BUS_7SegmentsDisplay:inst8|7SegmentDisplay:inst"
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "SynchronousCounter:inst|OverwritableTFF:inst20|inst" is converted into an equivalent circuit using register "SynchronousCounter:inst|OverwritableTFF:inst20|inst~_emulated" and latch "SynchronousCounter:inst|OverwritableTFF:inst20|inst~1"
+    Warning (13310): Register "SynchronousCounter:inst|OverwritableTFF:inst19|inst" is converted into an equivalent circuit using register "SynchronousCounter:inst|OverwritableTFF:inst19|inst~_emulated" and latch "SynchronousCounter:inst|OverwritableTFF:inst19|inst~1"
+    Warning (13310): Register "SynchronousCounter:inst|OverwritableTFF:inst18|inst" is converted into an equivalent circuit using register "SynchronousCounter:inst|OverwritableTFF:inst18|inst~_emulated" and latch "SynchronousCounter:inst|OverwritableTFF:inst18|inst~1"
+    Warning (13310): Register "SynchronousCounter:inst|OverwritableTFF:inst1|inst" is converted into an equivalent circuit using register "SynchronousCounter:inst|OverwritableTFF:inst1|inst~_emulated" and latch "SynchronousCounter:inst|OverwritableTFF:inst1|inst~1"
+    Warning (13310): Register "debouncer:inst2|out_key" is converted into an equivalent circuit using register "debouncer:inst2|out_key~_emulated" and latch "debouncer:inst2|out_key~1" File: C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v Line: 42
+    Warning (13310): Register "debouncer:inst2|intermediate" is converted into an equivalent circuit using register "debouncer:inst2|intermediate~_emulated" and latch "debouncer:inst2|out_key~1" File: C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v Line: 50
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 83 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Thu Oct  6 14:10:51 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 

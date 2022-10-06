@@ -148,7 +148,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLR_COUNTER",
+					"name" : "CLR_GLOBAL",
 					"strict" : false
 				},
 				{

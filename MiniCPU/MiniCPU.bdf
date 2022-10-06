@@ -700,11 +700,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 88 528)
 )
 (connector
-	(text "JMP" (rect 99 496 121 513)(font "Intel Clear" ))
-	(pt 128 512)
-	(pt 88 512)
-)
-(connector
 	(text "COUNTER[7..0]" (rect 272 480 343 497)(font "Intel Clear" ))
 	(pt 264 496)
 	(pt 328 496)
@@ -765,15 +760,15 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "ULA_OPERAND[3..0]" (rect 616 360 715 377)(font "Intel Clear" ))
-	(pt 704 376)
-	(pt 608 376)
+	(text "ULA_OPERAND[3..0]" (rect 616 376 715 393)(font "Intel Clear" ))
+	(pt 704 392)
+	(pt 608 392)
 	(bus)
 )
 (connector
-	(text "ULA_REGISTER[3..0]" (rect 619 376 715 393)(font "Intel Clear" ))
-	(pt 704 392)
-	(pt 608 392)
+	(text "ULA_REGISTER[3..0]" (rect 619 360 715 377)(font "Intel Clear" ))
+	(pt 704 376)
+	(pt 608 376)
 	(bus)
 )
 (connector
@@ -917,4 +912,9 @@ https://fpgasoftware.intel.com/eula.
 	(text "NCLOK" (rect 667 512 702 529)(font "Intel Clear" ))
 	(pt 704 528)
 	(pt 664 528)
+)
+(connector
+	(text "PC_LOAD" (rect 83 496 131 513)(font "Intel Clear" ))
+	(pt 72 512)
+	(pt 128 512)
 )

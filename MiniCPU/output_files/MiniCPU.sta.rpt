@@ -1,5 +1,5 @@
 Timing Analyzer report for MiniCPU
-Tue Sep 20 15:56:38 2022
+Thu Oct  6 14:11:22 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -102,14 +102,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.6%      ;
-;     Processor 3            ;   2.5%      ;
-;     Processor 4            ;   2.4%      ;
+;     Processor 2            ;   2.4%      ;
+;     Processor 3            ;   2.3%      ;
+;     Processor 4            ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -129,9 +129,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name    ; Note ;
 +------------+-----------------+---------------+------+
-; 115.5 MHz  ; 115.5 MHz       ; INPUT_CLK     ;      ;
-; 118.09 MHz ; 118.09 MHz      ; RST_DEBOUNCER ;      ;
-; 262.74 MHz ; 262.74 MHz      ; CLK_FPGA      ;      ;
+; 66.2 MHz   ; 66.2 MHz        ; INPUT_CLK     ;      ;
+; 67.97 MHz  ; 67.97 MHz       ; RST_DEBOUNCER ;      ;
+; 240.73 MHz ; 240.73 MHz      ; CLK_FPGA      ;      ;
 +------------+-----------------+---------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -147,9 +147,9 @@ HTML report is unavailable in plain text report export.
 +---------------+--------+---------------+
 ; Clock         ; Slack  ; End Point TNS ;
 +---------------+--------+---------------+
-; RST_DEBOUNCER ; -4.260 ; -89.618       ;
-; INPUT_CLK     ; -4.254 ; -84.146       ;
-; CLK_FPGA      ; -3.226 ; -53.499       ;
+; INPUT_CLK     ; -7.531 ; -100.218      ;
+; RST_DEBOUNCER ; -7.272 ; -100.710      ;
+; CLK_FPGA      ; -3.634 ; -53.419       ;
 +---------------+--------+---------------+
 
 
@@ -158,28 +158,32 @@ HTML report is unavailable in plain text report export.
 +---------------+-------+---------------+
 ; Clock         ; Slack ; End Point TNS ;
 +---------------+-------+---------------+
-; CLK_FPGA      ; 0.426 ; 0.000         ;
-; INPUT_CLK     ; 1.092 ; 0.000         ;
-; RST_DEBOUNCER ; 1.113 ; 0.000         ;
+; CLK_FPGA      ; 0.427 ; 0.000         ;
+; RST_DEBOUNCER ; 0.957 ; 0.000         ;
+; INPUT_CLK     ; 1.416 ; 0.000         ;
 +---------------+-------+---------------+
 
 
 +----------------------------------------+
 ; Slow 1100mV 85C Model Recovery Summary ;
-+----------+--------+--------------------+
-; Clock    ; Slack  ; End Point TNS      ;
-+----------+--------+--------------------+
-; CLK_FPGA ; -2.589 ; -46.428            ;
-+----------+--------+--------------------+
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; INPUT_CLK     ; -5.663 ; -22.281       ;
+; RST_DEBOUNCER ; -5.404 ; -21.245       ;
+; CLK_FPGA      ; -2.516 ; -45.190       ;
++---------------+--------+---------------+
 
 
 +---------------------------------------+
 ; Slow 1100mV 85C Model Removal Summary ;
-+----------+-------+--------------------+
-; Clock    ; Slack ; End Point TNS      ;
-+----------+-------+--------------------+
-; CLK_FPGA ; 1.230 ; 0.000              ;
-+----------+-------+--------------------+
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; CLK_FPGA      ; 1.213 ; 0.000         ;
+; RST_DEBOUNCER ; 2.054 ; 0.000         ;
+; INPUT_CLK     ; 2.328 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +---------------------------------------------------+
@@ -187,9 +191,9 @@ HTML report is unavailable in plain text report export.
 +---------------+--------+--------------------------+
 ; Clock         ; Slack  ; End Point TNS            ;
 +---------------+--------+--------------------------+
-; RST_DEBOUNCER ; -2.636 ; -54.566                  ;
-; INPUT_CLK     ; -2.636 ; -53.916                  ;
-; CLK_FPGA      ; -0.538 ; -14.050                  ;
+; INPUT_CLK     ; -2.636 ; -47.874                  ;
+; RST_DEBOUNCER ; -2.636 ; -46.124                  ;
+; CLK_FPGA      ; -0.538 ; -14.028                  ;
 +---------------+--------+--------------------------+
 
 
@@ -204,9 +208,9 @@ No synchronizer chains to report.
 +------------+-----------------+---------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name    ; Note ;
 +------------+-----------------+---------------+------+
-; 121.68 MHz ; 121.68 MHz      ; INPUT_CLK     ;      ;
-; 124.63 MHz ; 124.63 MHz      ; RST_DEBOUNCER ;      ;
-; 256.94 MHz ; 256.94 MHz      ; CLK_FPGA      ;      ;
+; 64.17 MHz  ; 64.17 MHz       ; INPUT_CLK     ;      ;
+; 65.97 MHz  ; 65.97 MHz       ; RST_DEBOUNCER ;      ;
+; 246.61 MHz ; 246.61 MHz      ; CLK_FPGA      ;      ;
 +------------+-----------------+---------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -216,9 +220,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+--------+---------------+
 ; Clock         ; Slack  ; End Point TNS ;
 +---------------+--------+---------------+
-; INPUT_CLK     ; -4.058 ; -82.007       ;
-; RST_DEBOUNCER ; -4.032 ; -86.705       ;
-; CLK_FPGA      ; -3.069 ; -50.036       ;
+; INPUT_CLK     ; -7.854 ; -101.988      ;
+; RST_DEBOUNCER ; -7.412 ; -99.590       ;
+; CLK_FPGA      ; -3.559 ; -50.521       ;
 +---------------+--------+---------------+
 
 
@@ -227,28 +231,32 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+-------+---------------+
 ; Clock         ; Slack ; End Point TNS ;
 +---------------+-------+---------------+
-; CLK_FPGA      ; 0.437 ; 0.000         ;
-; RST_DEBOUNCER ; 0.901 ; 0.000         ;
-; INPUT_CLK     ; 1.037 ; 0.000         ;
+; CLK_FPGA      ; 0.438 ; 0.000         ;
+; RST_DEBOUNCER ; 0.688 ; 0.000         ;
+; INPUT_CLK     ; 1.465 ; 0.000         ;
 +---------------+-------+---------------+
 
 
++----------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary  ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; INPUT_CLK     ; -5.961 ; -23.407       ;
+; RST_DEBOUNCER ; -5.519 ; -21.639       ;
+; CLK_FPGA      ; -2.277 ; -40.903       ;
++---------------+--------+---------------+
+
+
 +---------------------------------------+
-; Slow 1100mV 0C Model Recovery Summary ;
-+----------+--------+-------------------+
-; Clock    ; Slack  ; End Point TNS     ;
-+----------+--------+-------------------+
-; CLK_FPGA ; -2.364 ; -42.430           ;
-+----------+--------+-------------------+
-
-
-+--------------------------------------+
-; Slow 1100mV 0C Model Removal Summary ;
-+----------+-------+-------------------+
-; Clock    ; Slack ; End Point TNS     ;
-+----------+-------+-------------------+
-; CLK_FPGA ; 0.998 ; 0.000             ;
-+----------+-------+-------------------+
+; Slow 1100mV 0C Model Removal Summary  ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; CLK_FPGA      ; 0.958 ; 0.000         ;
+; RST_DEBOUNCER ; 2.023 ; 0.000         ;
+; INPUT_CLK     ; 2.480 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +--------------------------------------------------+
@@ -256,9 +264,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+--------+-------------------------+
 ; Clock         ; Slack  ; End Point TNS           ;
 +---------------+--------+-------------------------+
-; INPUT_CLK     ; -2.636 ; -54.342                 ;
-; RST_DEBOUNCER ; -2.636 ; -54.097                 ;
-; CLK_FPGA      ; -0.538 ; -14.098                 ;
+; INPUT_CLK     ; -2.636 ; -47.909                 ;
+; RST_DEBOUNCER ; -2.636 ; -45.975                 ;
+; CLK_FPGA      ; -0.538 ; -14.062                 ;
 +---------------+--------+-------------------------+
 
 
@@ -273,9 +281,9 @@ No synchronizer chains to report.
 +---------------+--------+---------------+
 ; Clock         ; Slack  ; End Point TNS ;
 +---------------+--------+---------------+
-; RST_DEBOUNCER ; -2.524 ; -39.489       ;
-; INPUT_CLK     ; -1.941 ; -37.579       ;
-; CLK_FPGA      ; -1.833 ; -29.532       ;
+; RST_DEBOUNCER ; -4.031 ; -53.989       ;
+; INPUT_CLK     ; -4.020 ; -51.055       ;
+; CLK_FPGA      ; -1.982 ; -28.085       ;
 +---------------+--------+---------------+
 
 
@@ -284,28 +292,32 @@ No synchronizer chains to report.
 +---------------+-------+---------------+
 ; Clock         ; Slack ; End Point TNS ;
 +---------------+-------+---------------+
-; CLK_FPGA      ; 0.153 ; 0.000         ;
-; RST_DEBOUNCER ; 0.379 ; 0.000         ;
-; INPUT_CLK     ; 0.381 ; 0.000         ;
+; CLK_FPGA      ; 0.170 ; 0.000         ;
+; RST_DEBOUNCER ; 0.317 ; 0.000         ;
+; INPUT_CLK     ; 0.386 ; 0.000         ;
 +---------------+-------+---------------+
 
 
 +----------------------------------------+
 ; Fast 1100mV 85C Model Recovery Summary ;
-+----------+--------+--------------------+
-; Clock    ; Slack  ; End Point TNS      ;
-+----------+--------+--------------------+
-; CLK_FPGA ; -1.463 ; -26.260            ;
-+----------+--------+--------------------+
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; RST_DEBOUNCER ; -3.131 ; -12.368       ;
+; INPUT_CLK     ; -3.120 ; -12.324       ;
+; CLK_FPGA      ; -1.450 ; -26.079       ;
++---------------+--------+---------------+
 
 
 +---------------------------------------+
 ; Fast 1100mV 85C Model Removal Summary ;
-+----------+-------+--------------------+
-; Clock    ; Slack ; End Point TNS      ;
-+----------+-------+--------------------+
-; CLK_FPGA ; 0.320 ; 0.000              ;
-+----------+-------+--------------------+
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; CLK_FPGA      ; 0.334 ; 0.000         ;
+; INPUT_CLK     ; 1.763 ; 0.000         ;
+; RST_DEBOUNCER ; 1.768 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +---------------------------------------------------+
@@ -313,9 +325,9 @@ No synchronizer chains to report.
 +---------------+--------+--------------------------+
 ; Clock         ; Slack  ; End Point TNS            ;
 +---------------+--------+--------------------------+
-; RST_DEBOUNCER ; -2.174 ; -41.728                  ;
-; INPUT_CLK     ; -2.174 ; -40.175                  ;
-; CLK_FPGA      ; -0.096 ; -1.720                   ;
+; INPUT_CLK     ; -2.174 ; -39.293                  ;
+; RST_DEBOUNCER ; -2.174 ; -37.071                  ;
+; CLK_FPGA      ; -0.099 ; -1.764                   ;
 +---------------+--------+--------------------------+
 
 
@@ -330,9 +342,9 @@ No synchronizer chains to report.
 +---------------+--------+---------------+
 ; Clock         ; Slack  ; End Point TNS ;
 +---------------+--------+---------------+
-; RST_DEBOUNCER ; -2.276 ; -34.384       ;
-; INPUT_CLK     ; -1.613 ; -31.822       ;
-; CLK_FPGA      ; -1.612 ; -25.847       ;
+; INPUT_CLK     ; -3.842 ; -47.056       ;
+; RST_DEBOUNCER ; -3.837 ; -49.549       ;
+; CLK_FPGA      ; -1.731 ; -24.968       ;
 +---------------+--------+---------------+
 
 
@@ -341,28 +353,32 @@ No synchronizer chains to report.
 +---------------+-------+---------------+
 ; Clock         ; Slack ; End Point TNS ;
 +---------------+-------+---------------+
-; CLK_FPGA      ; 0.045 ; 0.000         ;
-; INPUT_CLK     ; 0.271 ; 0.000         ;
-; RST_DEBOUNCER ; 0.305 ; 0.000         ;
+; CLK_FPGA      ; 0.079 ; 0.000         ;
+; RST_DEBOUNCER ; 0.246 ; 0.000         ;
+; INPUT_CLK     ; 0.329 ; 0.000         ;
 +---------------+-------+---------------+
 
 
++----------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary  ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; INPUT_CLK     ; -3.013 ; -11.861       ;
+; RST_DEBOUNCER ; -3.008 ; -11.841       ;
+; CLK_FPGA      ; -1.231 ; -22.141       ;
++---------------+--------+---------------+
+
+
 +---------------------------------------+
-; Fast 1100mV 0C Model Recovery Summary ;
-+----------+--------+-------------------+
-; Clock    ; Slack  ; End Point TNS     ;
-+----------+--------+-------------------+
-; CLK_FPGA ; -1.248 ; -22.390           ;
-+----------+--------+-------------------+
-
-
-+--------------------------------------+
-; Fast 1100mV 0C Model Removal Summary ;
-+----------+-------+-------------------+
-; Clock    ; Slack ; End Point TNS     ;
-+----------+-------+-------------------+
-; CLK_FPGA ; 0.169 ; 0.000             ;
-+----------+-------+-------------------+
+; Fast 1100mV 0C Model Removal Summary  ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; CLK_FPGA      ; 0.183 ; 0.000         ;
+; RST_DEBOUNCER ; 1.703 ; 0.000         ;
+; INPUT_CLK     ; 1.708 ; 0.000         ;
++---------------+-------+---------------+
 
 
 +--------------------------------------------------+
@@ -370,9 +386,9 @@ No synchronizer chains to report.
 +---------------+--------+-------------------------+
 ; Clock         ; Slack  ; End Point TNS           ;
 +---------------+--------+-------------------------+
-; RST_DEBOUNCER ; -2.174 ; -40.386                 ;
-; INPUT_CLK     ; -2.174 ; -39.381                 ;
-; CLK_FPGA      ; -0.097 ; -1.724                  ;
+; INPUT_CLK     ; -2.174 ; -38.364                 ;
+; RST_DEBOUNCER ; -2.174 ; -36.212                 ;
+; CLK_FPGA      ; -0.099 ; -1.777                  ;
 +---------------+--------+-------------------------+
 
 
@@ -387,14 +403,14 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -4.260   ; 0.045 ; -2.589   ; 0.169   ; -2.636              ;
-;  CLK_FPGA        ; -3.226   ; 0.045 ; -2.589   ; 0.169   ; -0.538              ;
-;  INPUT_CLK       ; -4.254   ; 0.271 ; N/A      ; N/A     ; -2.636              ;
-;  RST_DEBOUNCER   ; -4.260   ; 0.305 ; N/A      ; N/A     ; -2.636              ;
-; Design-wide TNS  ; -227.263 ; 0.0   ; -46.428  ; 0.0     ; -122.537            ;
-;  CLK_FPGA        ; -53.499  ; 0.000 ; -46.428  ; 0.000   ; -14.098             ;
-;  INPUT_CLK       ; -84.146  ; 0.000 ; N/A      ; N/A     ; -54.342             ;
-;  RST_DEBOUNCER   ; -89.618  ; 0.000 ; N/A      ; N/A     ; -54.566             ;
+; Worst-case Slack ; -7.854   ; 0.079 ; -5.961   ; 0.183   ; -2.636              ;
+;  CLK_FPGA        ; -3.634   ; 0.079 ; -2.516   ; 0.183   ; -0.538              ;
+;  INPUT_CLK       ; -7.854   ; 0.329 ; -5.961   ; 1.708   ; -2.636              ;
+;  RST_DEBOUNCER   ; -7.412   ; 0.246 ; -5.519   ; 1.703   ; -2.636              ;
+; Design-wide TNS  ; -254.347 ; 0.0   ; -88.716  ; 0.0     ; -108.026            ;
+;  CLK_FPGA        ; -53.419  ; 0.000 ; -45.190  ; 0.000   ; -14.062             ;
+;  INPUT_CLK       ; -101.988 ; 0.000 ; -23.407  ; 0.000   ; -47.909             ;
+;  RST_DEBOUNCER   ; -100.710 ; 0.000 ; -21.639  ; 0.000   ; -46.124             ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -442,24 +458,16 @@ No synchronizer chains to report.
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+-------------------------------------------------------------------+
-; Input Transition Times                                            ;
-+----------------+--------------+-----------------+-----------------+
-; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+----------------+--------------+-----------------+-----------------+
-; MEM_ADDRESS[7] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[6] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[5] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[4] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MEM_ADDRESS[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; CLR_COUNTER    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RST_DEBOUNCER  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; INPUT_CLK      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; CLK_FPGA       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+----------------+--------------+-----------------+-----------------+
++------------------------------------------------------------------+
+; Input Transition Times                                           ;
++---------------+--------------+-----------------+-----------------+
+; Pin           ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++---------------+--------------+-----------------+-----------------+
+; CLR_GLOBAL    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RST_DEBOUNCER ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; INPUT_CLK     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLK_FPGA      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++---------------+--------------+-----------------+-----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -646,10 +654,10 @@ No synchronizer chains to report.
 ; CLK_FPGA      ; CLK_FPGA      ; 443      ; 0        ; 0        ; 0        ;
 ; INPUT_CLK     ; CLK_FPGA      ; 69       ; 69       ; 0        ; 0        ;
 ; RST_DEBOUNCER ; CLK_FPGA      ; 72       ; 35       ; 0        ; 0        ;
-; INPUT_CLK     ; INPUT_CLK     ; 70       ; 0        ; 8        ; 0        ;
-; RST_DEBOUNCER ; INPUT_CLK     ; 70       ; 0        ; 8        ; 0        ;
-; INPUT_CLK     ; RST_DEBOUNCER ; 71       ; 1        ; 8        ; 0        ;
-; RST_DEBOUNCER ; RST_DEBOUNCER ; 70       ; 0        ; 8        ; 0        ;
+; INPUT_CLK     ; INPUT_CLK     ; 36       ; 156      ; 8        ; 24       ;
+; RST_DEBOUNCER ; INPUT_CLK     ; 36       ; 156      ; 8        ; 24       ;
+; INPUT_CLK     ; RST_DEBOUNCER ; 37       ; 157      ; 8        ; 24       ;
+; RST_DEBOUNCER ; RST_DEBOUNCER ; 36       ; 156      ; 8        ; 24       ;
 +---------------+---------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -662,31 +670,39 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; CLK_FPGA      ; CLK_FPGA      ; 443      ; 0        ; 0        ; 0        ;
 ; INPUT_CLK     ; CLK_FPGA      ; 69       ; 69       ; 0        ; 0        ;
 ; RST_DEBOUNCER ; CLK_FPGA      ; 72       ; 35       ; 0        ; 0        ;
-; INPUT_CLK     ; INPUT_CLK     ; 70       ; 0        ; 8        ; 0        ;
-; RST_DEBOUNCER ; INPUT_CLK     ; 70       ; 0        ; 8        ; 0        ;
-; INPUT_CLK     ; RST_DEBOUNCER ; 71       ; 1        ; 8        ; 0        ;
-; RST_DEBOUNCER ; RST_DEBOUNCER ; 70       ; 0        ; 8        ; 0        ;
+; INPUT_CLK     ; INPUT_CLK     ; 36       ; 156      ; 8        ; 24       ;
+; RST_DEBOUNCER ; INPUT_CLK     ; 36       ; 156      ; 8        ; 24       ;
+; INPUT_CLK     ; RST_DEBOUNCER ; 37       ; 157      ; 8        ; 24       ;
+; RST_DEBOUNCER ; RST_DEBOUNCER ; 36       ; 156      ; 8        ; 24       ;
 +---------------+---------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+----------------------------------------------------------------------+
-; Recovery Transfers                                                   ;
-+---------------+----------+----------+----------+----------+----------+
-; From Clock    ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------+----------+----------+----------+----------+----------+
-; RST_DEBOUNCER ; CLK_FPGA ; 18       ; 18       ; 0        ; 0        ;
-+---------------+----------+----------+----------+----------+----------+
++---------------------------------------------------------------------------+
+; Recovery Transfers                                                        ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; RST_DEBOUNCER ; CLK_FPGA      ; 18       ; 18       ; 0        ; 0        ;
+; INPUT_CLK     ; INPUT_CLK     ; 0        ; 24       ; 0        ; 0        ;
+; RST_DEBOUNCER ; INPUT_CLK     ; 0        ; 24       ; 0        ; 0        ;
+; INPUT_CLK     ; RST_DEBOUNCER ; 0        ; 24       ; 0        ; 0        ;
+; RST_DEBOUNCER ; RST_DEBOUNCER ; 0        ; 24       ; 0        ; 0        ;
++---------------+---------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+----------------------------------------------------------------------+
-; Removal Transfers                                                    ;
-+---------------+----------+----------+----------+----------+----------+
-; From Clock    ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------+----------+----------+----------+----------+----------+
-; RST_DEBOUNCER ; CLK_FPGA ; 18       ; 18       ; 0        ; 0        ;
-+---------------+----------+----------+----------+----------+----------+
++---------------------------------------------------------------------------+
+; Removal Transfers                                                         ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; RST_DEBOUNCER ; CLK_FPGA      ; 18       ; 18       ; 0        ; 0        ;
+; INPUT_CLK     ; INPUT_CLK     ; 0        ; 24       ; 0        ; 0        ;
+; RST_DEBOUNCER ; INPUT_CLK     ; 0        ; 24       ; 0        ; 0        ;
+; INPUT_CLK     ; RST_DEBOUNCER ; 0        ; 24       ; 0        ; 0        ;
+; RST_DEBOUNCER ; RST_DEBOUNCER ; 0        ; 24       ; 0        ; 0        ;
++---------------+---------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -710,9 +726,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 20    ; 20   ;
 ; Unconstrained Output Ports      ; 36    ; 36   ;
-; Unconstrained Output Port Paths ; 36    ; 36   ;
+; Unconstrained Output Port Paths ; 48    ; 48   ;
 +---------------------------------+-------+------+
 
 
@@ -727,13 +743,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------+---------------+------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                          ;
-+-------------+--------------------------------------------------------------------------------------+
-; Input Port  ; Comment                                                                              ;
-+-------------+--------------------------------------------------------------------------------------+
-; CLR_COUNTER ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; CLR_GLOBAL ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -780,13 +796,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+---------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                          ;
-+-------------+--------------------------------------------------------------------------------------+
-; Input Port  ; Comment                                                                              ;
-+-------------+--------------------------------------------------------------------------------------+
-; CLR_COUNTER ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; CLR_GLOBAL ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -839,14 +855,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Sep 20 15:56:32 2022
+    Info: Processing started: Thu Oct  6 14:11:17 2022
 Info: Command: quartus_sta MiniCPU -c MiniCPU
 Info: qsta_default_script.tcl version: #1
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'MiniCPU.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
@@ -854,145 +869,161 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name CLK_FPGA CLK_FPGA
     Info (332105): create_clock -period 1.000 -name RST_DEBOUNCER RST_DEBOUNCER
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst2|out_key~2  from: datae  to: combout
+    Info (332098): Cell: inst2|out_key~2  from: datab  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.260
+Info (332146): Worst-case setup slack is -7.531
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.260             -89.618 RST_DEBOUNCER 
-    Info (332119):    -4.254             -84.146 INPUT_CLK 
-    Info (332119):    -3.226             -53.499 CLK_FPGA 
-Info (332146): Worst-case hold slack is 0.426
+    Info (332119):    -7.531            -100.218 INPUT_CLK 
+    Info (332119):    -7.272            -100.710 RST_DEBOUNCER 
+    Info (332119):    -3.634             -53.419 CLK_FPGA 
+Info (332146): Worst-case hold slack is 0.427
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.426               0.000 CLK_FPGA 
-    Info (332119):     1.092               0.000 INPUT_CLK 
-    Info (332119):     1.113               0.000 RST_DEBOUNCER 
-Info (332146): Worst-case recovery slack is -2.589
+    Info (332119):     0.427               0.000 CLK_FPGA 
+    Info (332119):     0.957               0.000 RST_DEBOUNCER 
+    Info (332119):     1.416               0.000 INPUT_CLK 
+Info (332146): Worst-case recovery slack is -5.663
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.589             -46.428 CLK_FPGA 
-Info (332146): Worst-case removal slack is 1.230
+    Info (332119):    -5.663             -22.281 INPUT_CLK 
+    Info (332119):    -5.404             -21.245 RST_DEBOUNCER 
+    Info (332119):    -2.516             -45.190 CLK_FPGA 
+Info (332146): Worst-case removal slack is 1.213
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.230               0.000 CLK_FPGA 
+    Info (332119):     1.213               0.000 CLK_FPGA 
+    Info (332119):     2.054               0.000 RST_DEBOUNCER 
+    Info (332119):     2.328               0.000 INPUT_CLK 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636             -54.566 RST_DEBOUNCER 
-    Info (332119):    -2.636             -53.916 INPUT_CLK 
-    Info (332119):    -0.538             -14.050 CLK_FPGA 
+    Info (332119):    -2.636             -47.874 INPUT_CLK 
+    Info (332119):    -2.636             -46.124 RST_DEBOUNCER 
+    Info (332119):    -0.538             -14.028 CLK_FPGA 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst2|out_key~2  from: datae  to: combout
+    Info (332098): Cell: inst2|out_key~2  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.058
+Info (332146): Worst-case setup slack is -7.854
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.058             -82.007 INPUT_CLK 
-    Info (332119):    -4.032             -86.705 RST_DEBOUNCER 
-    Info (332119):    -3.069             -50.036 CLK_FPGA 
-Info (332146): Worst-case hold slack is 0.437
+    Info (332119):    -7.854            -101.988 INPUT_CLK 
+    Info (332119):    -7.412             -99.590 RST_DEBOUNCER 
+    Info (332119):    -3.559             -50.521 CLK_FPGA 
+Info (332146): Worst-case hold slack is 0.438
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.437               0.000 CLK_FPGA 
-    Info (332119):     0.901               0.000 RST_DEBOUNCER 
-    Info (332119):     1.037               0.000 INPUT_CLK 
-Info (332146): Worst-case recovery slack is -2.364
+    Info (332119):     0.438               0.000 CLK_FPGA 
+    Info (332119):     0.688               0.000 RST_DEBOUNCER 
+    Info (332119):     1.465               0.000 INPUT_CLK 
+Info (332146): Worst-case recovery slack is -5.961
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.364             -42.430 CLK_FPGA 
-Info (332146): Worst-case removal slack is 0.998
+    Info (332119):    -5.961             -23.407 INPUT_CLK 
+    Info (332119):    -5.519             -21.639 RST_DEBOUNCER 
+    Info (332119):    -2.277             -40.903 CLK_FPGA 
+Info (332146): Worst-case removal slack is 0.958
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.998               0.000 CLK_FPGA 
+    Info (332119):     0.958               0.000 CLK_FPGA 
+    Info (332119):     2.023               0.000 RST_DEBOUNCER 
+    Info (332119):     2.480               0.000 INPUT_CLK 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636             -54.342 INPUT_CLK 
-    Info (332119):    -2.636             -54.097 RST_DEBOUNCER 
-    Info (332119):    -0.538             -14.098 CLK_FPGA 
+    Info (332119):    -2.636             -47.909 INPUT_CLK 
+    Info (332119):    -2.636             -45.975 RST_DEBOUNCER 
+    Info (332119):    -0.538             -14.062 CLK_FPGA 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst2|out_key~2  from: datae  to: combout
+    Info (332098): Cell: inst2|out_key~2  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.524
+Info (332146): Worst-case setup slack is -4.031
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.524             -39.489 RST_DEBOUNCER 
-    Info (332119):    -1.941             -37.579 INPUT_CLK 
-    Info (332119):    -1.833             -29.532 CLK_FPGA 
-Info (332146): Worst-case hold slack is 0.153
+    Info (332119):    -4.031             -53.989 RST_DEBOUNCER 
+    Info (332119):    -4.020             -51.055 INPUT_CLK 
+    Info (332119):    -1.982             -28.085 CLK_FPGA 
+Info (332146): Worst-case hold slack is 0.170
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.153               0.000 CLK_FPGA 
-    Info (332119):     0.379               0.000 RST_DEBOUNCER 
-    Info (332119):     0.381               0.000 INPUT_CLK 
-Info (332146): Worst-case recovery slack is -1.463
+    Info (332119):     0.170               0.000 CLK_FPGA 
+    Info (332119):     0.317               0.000 RST_DEBOUNCER 
+    Info (332119):     0.386               0.000 INPUT_CLK 
+Info (332146): Worst-case recovery slack is -3.131
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.463             -26.260 CLK_FPGA 
-Info (332146): Worst-case removal slack is 0.320
+    Info (332119):    -3.131             -12.368 RST_DEBOUNCER 
+    Info (332119):    -3.120             -12.324 INPUT_CLK 
+    Info (332119):    -1.450             -26.079 CLK_FPGA 
+Info (332146): Worst-case removal slack is 0.334
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.320               0.000 CLK_FPGA 
+    Info (332119):     0.334               0.000 CLK_FPGA 
+    Info (332119):     1.763               0.000 INPUT_CLK 
+    Info (332119):     1.768               0.000 RST_DEBOUNCER 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -41.728 RST_DEBOUNCER 
-    Info (332119):    -2.174             -40.175 INPUT_CLK 
-    Info (332119):    -0.096              -1.720 CLK_FPGA 
+    Info (332119):    -2.174             -39.293 INPUT_CLK 
+    Info (332119):    -2.174             -37.071 RST_DEBOUNCER 
+    Info (332119):    -0.099              -1.764 CLK_FPGA 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst2|out_key~2  from: datae  to: combout
+    Info (332098): Cell: inst2|out_key~2  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.276
+Info (332146): Worst-case setup slack is -3.842
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.276             -34.384 RST_DEBOUNCER 
-    Info (332119):    -1.613             -31.822 INPUT_CLK 
-    Info (332119):    -1.612             -25.847 CLK_FPGA 
-Info (332146): Worst-case hold slack is 0.045
+    Info (332119):    -3.842             -47.056 INPUT_CLK 
+    Info (332119):    -3.837             -49.549 RST_DEBOUNCER 
+    Info (332119):    -1.731             -24.968 CLK_FPGA 
+Info (332146): Worst-case hold slack is 0.079
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.045               0.000 CLK_FPGA 
-    Info (332119):     0.271               0.000 INPUT_CLK 
-    Info (332119):     0.305               0.000 RST_DEBOUNCER 
-Info (332146): Worst-case recovery slack is -1.248
+    Info (332119):     0.079               0.000 CLK_FPGA 
+    Info (332119):     0.246               0.000 RST_DEBOUNCER 
+    Info (332119):     0.329               0.000 INPUT_CLK 
+Info (332146): Worst-case recovery slack is -3.013
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.248             -22.390 CLK_FPGA 
-Info (332146): Worst-case removal slack is 0.169
+    Info (332119):    -3.013             -11.861 INPUT_CLK 
+    Info (332119):    -3.008             -11.841 RST_DEBOUNCER 
+    Info (332119):    -1.231             -22.141 CLK_FPGA 
+Info (332146): Worst-case removal slack is 0.183
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.169               0.000 CLK_FPGA 
+    Info (332119):     0.183               0.000 CLK_FPGA 
+    Info (332119):     1.703               0.000 RST_DEBOUNCER 
+    Info (332119):     1.708               0.000 INPUT_CLK 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -40.386 RST_DEBOUNCER 
-    Info (332119):    -2.174             -39.381 INPUT_CLK 
-    Info (332119):    -0.097              -1.724 CLK_FPGA 
+    Info (332119):    -2.174             -38.364 INPUT_CLK 
+    Info (332119):    -2.174             -36.212 RST_DEBOUNCER 
+    Info (332119):    -0.099              -1.777 CLK_FPGA 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5108 megabytes
-    Info: Processing ended: Tue Sep 20 15:56:38 2022
-    Info: Elapsed time: 00:00:06
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5096 megabytes
+    Info: Processing ended: Thu Oct  6 14:11:22 2022
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
 
