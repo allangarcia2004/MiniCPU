@@ -91,6 +91,7 @@ set_location_assignment PIN_P14 -to MEM_OUT_3[3]
 set_location_assignment PIN_T14 -to MEM_OUT_3[2]
 set_location_assignment PIN_M8 -to MEM_OUT_3[1]
 set_location_assignment PIN_N9 -to MEM_OUT_3[0]
+set_global_assignment -name SEARCH_PATH ../controlunit
 set_global_assignment -name SEARCH_PATH ../arithmeticlogicunit
 set_global_assignment -name SEARCH_PATH ../4bitregister
 set_global_assignment -name SEARCH_PATH ../7segmentsdisplay
