@@ -4,19 +4,139 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "J[1]",
+					"name" : "REG_1_LOAD",
 					"strict" : false
 				},
 				{
-					"name" : "J[0]",
+					"name" : "TON[1]",
 					"strict" : false
 				},
 				{
-					"name" : "JN[1]",
+					"name" : "TON[0]",
 					"strict" : false
 				},
 				{
-					"name" : "JN[0]",
+					"name" : "TO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "JMPN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "JMPN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_1_CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "REG_2_LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "REG_2_CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "PC_LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "JMP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "JMP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_Op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_Op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[14]",
 					"strict" : false
 				},
 				{
@@ -25,6 +145,70 @@
 				},
 				{
 					"name" : "MEM_CONTENTS[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[8]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_1[0]",
 					"strict" : false
 				}
 			]

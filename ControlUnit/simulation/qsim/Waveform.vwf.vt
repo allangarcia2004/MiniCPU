@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/04/2022 16:08:04"
+// Generated on "10/11/2022 16:45:50"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          ControlUnit
 // 
@@ -34,57 +34,169 @@ reg [15:0] MEM_CONTENTS;
 reg [3:0] REG_1;
 reg [3:0] REG_2;
 // wires                                               
-wire [1:0] J;
-wire [1:0] JN;
+wire [1:0] IN;
+wire [1:0] INN;
+wire [1:0] JMP;
+wire [1:0] JMPN;
 wire PC_CLRN;
+wire [3:0] PC_D;
 wire PC_LOAD;
 wire REG_1_CLRN;
-wire REG_1_EN;
 wire REG_1_LOAD;
 wire REG_2_CLRN;
-wire REG_2_EN;
 wire REG_2_LOAD;
-wire ULA_A;
-wire ULA_B;
+wire [1:0] TO;
+wire [1:0] TON;
+wire [1:0] ULA_Op;
+wire [3:0] ULA_OPERAND;
+wire [3:0] ULA_REGISTER;
 
 // assign statements (if any)                          
 ControlUnit i1 (
 // port map - connection between master ports and signals/registers   
-	.J(J),
-	.JN(JN),
+	.IN(IN),
+	.INN(INN),
+	.JMP(JMP),
+	.JMPN(JMPN),
 	.MEM_CONTENTS(MEM_CONTENTS),
 	.PC_CLRN(PC_CLRN),
+	.PC_D(PC_D),
 	.PC_LOAD(PC_LOAD),
 	.REG_1(REG_1),
 	.REG_1_CLRN(REG_1_CLRN),
-	.REG_1_EN(REG_1_EN),
 	.REG_1_LOAD(REG_1_LOAD),
 	.REG_2(REG_2),
 	.REG_2_CLRN(REG_2_CLRN),
-	.REG_2_EN(REG_2_EN),
 	.REG_2_LOAD(REG_2_LOAD),
-	.ULA_A(ULA_A),
-	.ULA_B(ULA_B)
+	.TO(TO),
+	.TON(TON),
+	.ULA_Op(ULA_Op),
+	.ULA_OPERAND(ULA_OPERAND),
+	.ULA_REGISTER(ULA_REGISTER)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
-
-// MEM_CONTENTS[10]
-always
+// MEM_CONTENTS[ 15 ]
+initial
 begin
-	MEM_CONTENTS[10] = 1'b0;
-	MEM_CONTENTS[10] = #5000 1'b1;
-	#5000;
+	MEM_CONTENTS[15] = 1'b0;
 end 
-
-// MEM_CONTENTS[11]
-always
+// MEM_CONTENTS[ 14 ]
+initial
+begin
+	MEM_CONTENTS[14] = 1'b1;
+end 
+// MEM_CONTENTS[ 13 ]
+initial
+begin
+	MEM_CONTENTS[13] = 1'b1;
+end 
+// MEM_CONTENTS[ 12 ]
+initial
+begin
+	MEM_CONTENTS[12] = 1'b0;
+end 
+// MEM_CONTENTS[ 11 ]
+initial
 begin
 	MEM_CONTENTS[11] = 1'b0;
-	MEM_CONTENTS[11] = #10000 1'b1;
-	#10000;
+end 
+// MEM_CONTENTS[ 10 ]
+initial
+begin
+	MEM_CONTENTS[10] = 1'b0;
+end 
+// MEM_CONTENTS[ 9 ]
+initial
+begin
+	MEM_CONTENTS[9] = 1'b0;
+end 
+// MEM_CONTENTS[ 8 ]
+initial
+begin
+	MEM_CONTENTS[8] = 1'b0;
+end 
+// MEM_CONTENTS[ 7 ]
+initial
+begin
+	MEM_CONTENTS[7] = 1'b0;
+end 
+// MEM_CONTENTS[ 6 ]
+initial
+begin
+	MEM_CONTENTS[6] = 1'b0;
+end 
+// MEM_CONTENTS[ 5 ]
+initial
+begin
+	MEM_CONTENTS[5] = 1'b0;
+end 
+// MEM_CONTENTS[ 4 ]
+initial
+begin
+	MEM_CONTENTS[4] = 1'b0;
+end 
+// MEM_CONTENTS[ 3 ]
+initial
+begin
+	MEM_CONTENTS[3] = 1'b0;
+end 
+// MEM_CONTENTS[ 2 ]
+initial
+begin
+	MEM_CONTENTS[2] = 1'b1;
+end 
+// MEM_CONTENTS[ 1 ]
+initial
+begin
+	MEM_CONTENTS[1] = 1'b0;
+end 
+// MEM_CONTENTS[ 0 ]
+initial
+begin
+	MEM_CONTENTS[0] = 1'b1;
+end 
+// REG_1[ 3 ]
+initial
+begin
+	REG_1[3] = 1'b0;
+end 
+// REG_1[ 2 ]
+initial
+begin
+	REG_1[2] = 1'b1;
+end 
+// REG_1[ 1 ]
+initial
+begin
+	REG_1[1] = 1'b1;
+end 
+// REG_1[ 0 ]
+initial
+begin
+	REG_1[0] = 1'b0;
+end 
+// REG_2[ 3 ]
+initial
+begin
+	REG_2[3] = 1'b1;
+end 
+// REG_2[ 2 ]
+initial
+begin
+	REG_2[2] = 1'b0;
+end 
+// REG_2[ 1 ]
+initial
+begin
+	REG_2[1] = 1'b1;
+end 
+// REG_2[ 0 ]
+initial
+begin
+	REG_2[0] = 1'b0;
 end 
 endmodule
 

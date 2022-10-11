@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniCPU
-Thu Oct  6 14:10:51 2022
+Tue Oct 11 17:08:57 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -52,14 +52,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct  6 14:10:51 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 11 17:08:57 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; MiniCPU                                     ;
 ; Top-level Entity Name           ; MiniCPU                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 26                                          ;
-; Total pins                      ; 40                                          ;
+; Total registers                 ; 34                                          ;
+; Total pins                      ; 59                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -184,8 +184,6 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                        ; Library ;
 +----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
 ; MiniCPU.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/MiniCPU.bdf                         ;         ;
-; synchronouscounter.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/synchronouscounter/synchronouscounter.bdf   ;         ;
-; overwritabletff.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/synchronouscounter/overwritabletff.bdf      ;         ;
 ; controlunit.bdf                  ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/controlunit.bdf                 ;         ;
 ; mux_4x4.v                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v                       ;         ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
@@ -205,6 +203,8 @@ https://fpgasoftware.intel.com/eula.
 ; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
 ; db/altsyncram_ddg1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/db/altsyncram_ddg1.tdf              ;         ;
 ; debouncer.v                      ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v                       ;         ;
+; synchronouscounter.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/synchronouscounter/synchronouscounter.bdf   ;         ;
+; overwritabletff.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/synchronouscounter/overwritabletff.bdf      ;         ;
 ; 4bitregister.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/4bitregister/4bitregister.bdf               ;         ;
 ; arithmeticlogicunit.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/arithmeticlogicunit.bdf ;         ;
 ; mux_2x1.v                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/13731222/Desktop/allan/MiniCPU/arithmeticlogicunit/mux_2x1.v               ;         ;
@@ -222,54 +222,73 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 43                        ;
+; Estimate of Logic utilization (ALMs needed) ; 63                        ;
 ;                                             ;                           ;
-; Combinational ALUT usage for logic          ; 83                        ;
+; Combinational ALUT usage for logic          ; 112                       ;
 ;     -- 7 input functions                    ; 0                         ;
-;     -- 6 input functions                    ; 3                         ;
-;     -- 5 input functions                    ; 4                         ;
-;     -- 4 input functions                    ; 42                        ;
-;     -- <=3 input functions                  ; 34                        ;
+;     -- 6 input functions                    ; 13                        ;
+;     -- 5 input functions                    ; 10                        ;
+;     -- 4 input functions                    ; 52                        ;
+;     -- <=3 input functions                  ; 37                        ;
 ;                                             ;                           ;
-; Dedicated logic registers                   ; 26                        ;
+; Dedicated logic registers                   ; 34                        ;
 ;                                             ;                           ;
-; I/O pins                                    ; 40                        ;
+; I/O pins                                    ; 59                        ;
 ; Total MLAB memory bits                      ; 0                         ;
 ; Total block memory bits                     ; 4096                      ;
 ;                                             ;                           ;
 ; Total DSP Blocks                            ; 0                         ;
 ;                                             ;                           ;
 ; Maximum fan-out node                        ; debouncer:inst2|out_key~2 ;
-; Maximum fan-out                             ; 25                        ;
-; Total fan-out                               ; 614                       ;
-; Average fan-out                             ; 3.00                      ;
+; Maximum fan-out                             ; 27                        ;
+; Total fan-out                               ; 813                       ;
+; Average fan-out                             ; 2.90                      ;
 +---------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Entity Name          ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
-; |MiniCPU                                  ; 83 (0)              ; 26 (0)                    ; 4096              ; 0          ; 40   ; 0            ; |MiniCPU                                                                                 ; MiniCPU              ; work         ;
-;    |BUS_7SegmentsDisplay:inst6A|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6A                                                     ; BUS_7SegmentsDisplay ; work         ;
-;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6A|7SegmentDisplay:inst                                ; 7SegmentDisplay      ; work         ;
-;    |BUS_7SegmentsDisplay:inst6|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6                                                      ; BUS_7SegmentsDisplay ; work         ;
-;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6|7SegmentDisplay:inst                                 ; 7SegmentDisplay      ; work         ;
-;    |BUS_7SegmentsDisplay:inst7|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst7                                                      ; BUS_7SegmentsDisplay ; work         ;
-;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst7|7SegmentDisplay:inst                                 ; 7SegmentDisplay      ; work         ;
-;    |BUS_7SegmentsDisplay:inst8|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst8                                                      ; BUS_7SegmentsDisplay ; work         ;
-;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst8|7SegmentDisplay:inst                                 ; 7SegmentDisplay      ; work         ;
-;    |ROM_16x256:inst1|                     ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1                                                                ; ROM_16x256           ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component                                ; altsyncram           ; work         ;
-;          |altsyncram_ddg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated ; altsyncram_ddg1      ; work         ;
-;    |SynchronousCounter:inst|              ; 29 (5)              ; 8 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst                                                         ; SynchronousCounter   ; work         ;
-;       |OverwritableTFF:inst18|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst18                                  ; OverwritableTFF      ; work         ;
-;       |OverwritableTFF:inst19|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst19                                  ; OverwritableTFF      ; work         ;
-;       |OverwritableTFF:inst1|             ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst1                                   ; OverwritableTFF      ; work         ;
-;       |OverwritableTFF:inst20|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst20                                  ; OverwritableTFF      ; work         ;
-;    |debouncer:inst2|                      ; 26 (26)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|debouncer:inst2                                                                 ; debouncer            ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------+----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Entity Name          ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |MiniCPU                                  ; 112 (0)             ; 34 (0)                    ; 4096              ; 0          ; 59   ; 0            ; |MiniCPU                                                                                           ; MiniCPU              ; work         ;
+;    |4BitRegister:inst10|                  ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|4BitRegister:inst10                                                                       ; 4BitRegister         ; work         ;
+;    |4BitRegister:inst4|                   ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|4BitRegister:inst4                                                                        ; 4BitRegister         ; work         ;
+;    |ArithmeticLogicUnit:inst11|           ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11                                                                ; ArithmeticLogicUnit  ; work         ;
+;       |AdderSubtractor:inst2|             ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|AdderSubtractor:inst2                                          ; AdderSubtractor      ; work         ;
+;          |1BitAdderSubtractor:inst2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|AdderSubtractor:inst2|1BitAdderSubtractor:inst2                ; 1BitAdderSubtractor  ; work         ;
+;          |1BitAdderSubtractor:inst3|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|AdderSubtractor:inst2|1BitAdderSubtractor:inst3                ; 1BitAdderSubtractor  ; work         ;
+;          |1BitAdderSubtractor:inst4|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|AdderSubtractor:inst2|1BitAdderSubtractor:inst4                ; 1BitAdderSubtractor  ; work         ;
+;          |1BitAdderSubtractor:inst|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|AdderSubtractor:inst2|1BitAdderSubtractor:inst                 ; 1BitAdderSubtractor  ; work         ;
+;       |MUX_2x1:inst3|                     ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|MUX_2x1:inst3                                                  ; MUX_2x1              ; work         ;
+;          |lpm_mux:LPM_MUX_component|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component                        ; lpm_mux              ; work         ;
+;             |mux_sjc:auto_generated|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ArithmeticLogicUnit:inst11|MUX_2x1:inst3|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated ; mux_sjc              ; work         ;
+;    |BUS_7SegmentsDisplay:inst12|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst12                                                               ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst12|7SegmentDisplay:inst                                          ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst13|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst13                                                               ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst13|7SegmentDisplay:inst                                          ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst6A|          ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6A                                                               ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6A|7SegmentDisplay:inst                                          ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst6|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6                                                                ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst6|7SegmentDisplay:inst                                           ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst7|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst7                                                                ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst7|7SegmentDisplay:inst                                           ; 7SegmentDisplay      ; work         ;
+;    |BUS_7SegmentsDisplay:inst8|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst8                                                                ; BUS_7SegmentsDisplay ; work         ;
+;       |7SegmentDisplay:inst|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|BUS_7SegmentsDisplay:inst8|7SegmentDisplay:inst                                           ; 7SegmentDisplay      ; work         ;
+;    |ControlUnit:inst9|                    ; 3 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ControlUnit:inst9                                                                         ; ControlUnit          ; work         ;
+;       |MUX_4x4:inst5|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ControlUnit:inst9|MUX_4x4:inst5                                                           ; MUX_4x4              ; work         ;
+;          |lpm_mux:LPM_MUX_component|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component                                 ; lpm_mux              ; work         ;
+;             |mux_vjc:auto_generated|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|ControlUnit:inst9|MUX_4x4:inst5|lpm_mux:LPM_MUX_component|mux_vjc:auto_generated          ; mux_vjc              ; work         ;
+;    |ROM_16x256:inst1|                     ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1                                                                          ; ROM_16x256           ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component                                          ; altsyncram           ; work         ;
+;          |altsyncram_ddg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated           ; altsyncram_ddg1      ; work         ;
+;    |SynchronousCounter:inst|              ; 29 (5)              ; 8 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst                                                                   ; SynchronousCounter   ; work         ;
+;       |OverwritableTFF:inst18|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst18                                            ; OverwritableTFF      ; work         ;
+;       |OverwritableTFF:inst19|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst19                                            ; OverwritableTFF      ; work         ;
+;       |OverwritableTFF:inst1|             ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst1                                             ; OverwritableTFF      ; work         ;
+;       |OverwritableTFF:inst20|            ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|SynchronousCounter:inst|OverwritableTFF:inst20                                            ; OverwritableTFF      ; work         ;
+;    |debouncer:inst2|                      ; 26 (26)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniCPU|debouncer:inst2                                                                           ; debouncer            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -287,10 +306,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 34    ;
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 26    ;
+; Number of registers using Asynchronous Clear ; 34    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
@@ -468,24 +487,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 26                          ;
-;     CLR               ; 10                          ;
+; arriav_ff             ; 34                          ;
+;     CLR               ; 18                          ;
 ;     ENA CLR SCLR      ; 16                          ;
-; arriav_lcell_comb     ; 111                         ;
+; arriav_lcell_comb     ; 154                         ;
 ;     arith             ; 16                          ;
 ;         1 data inputs ; 16                          ;
-;     normal            ; 95                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 42                          ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 3                           ;
-; boundary_port         ; 40                          ;
+;     normal            ; 138                         ;
+;         1 data inputs ; 42                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 52                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 13                          ;
+; boundary_port         ; 59                          ;
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.45                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -504,23 +523,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Thu Oct  6 14:10:42 2022
+    Info: Processing started: Tue Oct 11 17:08:48 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniCPU -c MiniCPU
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file minicpu.bdf
     Info (12023): Found entity 1: MiniCPU
 Info (12127): Elaborating entity "MiniCPU" for the top level hierarchy
-Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/synchronouscounter/synchronouscounter.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: SynchronousCounter
-Info (12128): Elaborating entity "SynchronousCounter" for hierarchy "SynchronousCounter:inst"
-Warning (275008): Primitive "GND" of instance "inst17" not used
-Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/synchronouscounter/overwritabletff.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: OverwritableTFF
-Info (12128): Elaborating entity "OverwritableTFF" for hierarchy "SynchronousCounter:inst|OverwritableTFF:inst1"
 Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/controlunit/controlunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ControlUnit
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst9"
-Warning (275043): Pin "ULA_OPERAND[3..0]" is missing source
 Warning (275008): Primitive "NOT" of instance "inst14" not used
 Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/controlunit/mux_4x4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: MUX_4x4 File: C:/Users/13731222/Desktop/allan/MiniCPU/controlunit/mux_4x4.v Line: 40
@@ -562,10 +573,16 @@ Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/debounc
     Info (12023): Found entity 1: debouncer File: C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v Line: 28
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst2"
 Warning (10230): Verilog HDL assignment warning at debouncer.v(71): truncated value with size 32 to match size of target (16) File: C:/Users/13731222/Desktop/allan/MiniCPU/debouncer/debouncer.v Line: 71
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/synchronouscounter/synchronouscounter.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SynchronousCounter
+Info (12128): Elaborating entity "SynchronousCounter" for hierarchy "SynchronousCounter:inst"
+Warning (275008): Primitive "GND" of instance "inst17" not used
+Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/synchronouscounter/overwritabletff.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: OverwritableTFF
+Info (12128): Elaborating entity "OverwritableTFF" for hierarchy "SynchronousCounter:inst|OverwritableTFF:inst1"
 Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/4bitregister/4bitregister.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: 4BitRegister
 Info (12128): Elaborating entity "4BitRegister" for hierarchy "4BitRegister:inst4"
-Warning (275009): Pin "LOAD" not connected
 Warning (12125): Using design file /users/13731222/desktop/allan/minicpu/arithmeticlogicunit/arithmeticlogicunit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ArithmeticLogicUnit
 Info (12128): Elaborating entity "ArithmeticLogicUnit" for hierarchy "ArithmeticLogicUnit:inst11"
@@ -608,14 +625,14 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 83 logic cells
+    Info (21059): Implemented 55 output pins
+    Info (21061): Implemented 120 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Thu Oct  6 14:10:51 2022
+    Info: Processing ended: Tue Oct 11 17:08:57 2022
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:18
 

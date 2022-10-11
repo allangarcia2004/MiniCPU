@@ -744,16 +744,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 304 432)
 )
 (connector
-	(text "TON[0]" (rect 192 392 226 409)(font "Intel Clear" ))
-	(pt 184 408)
-	(pt 240 408)
-)
-(connector
-	(text "TO[1]" (rect 192 408 219 425)(font "Intel Clear" ))
-	(pt 184 424)
-	(pt 240 424)
-)
-(connector
 	(text "JMPN[0]" (rect 192 424 234 441)(font "Intel Clear" ))
 	(pt 184 440)
 	(pt 240 440)
@@ -774,24 +764,9 @@ https://fpgasoftware.intel.com/eula.
 	(pt 240 544)
 )
 (connector
-	(text "TO[0]" (rect 192 480 219 497)(font "Intel Clear" ))
-	(pt 184 496)
-	(pt 240 496)
-)
-(connector
-	(text "TON[1]" (rect 192 496 226 513)(font "Intel Clear" ))
-	(pt 184 512)
-	(pt 240 512)
-)
-(connector
 	(text "REG_2_LOAD" (rect 312 504 378 521)(font "Intel Clear" ))
 	(pt 376 520)
 	(pt 304 520)
-)
-(connector
-	(text "JMP[0]" (rect 192 624 227 641)(font "Intel Clear" ))
-	(pt 184 640)
-	(pt 240 640)
 )
 (connector
 	(text "PC_LOAD" (rect 312 688 360 705)(font "Intel Clear" ))
@@ -799,34 +774,9 @@ https://fpgasoftware.intel.com/eula.
 	(pt 304 704)
 )
 (connector
-	(text "JMP[0]" (rect 192 680 227 697)(font "Intel Clear" ))
-	(pt 184 696)
-	(pt 240 696)
-)
-(connector
-	(text "JMP[1]" (rect 192 696 227 713)(font "Intel Clear" ))
-	(pt 184 712)
-	(pt 240 712)
-)
-(connector
-	(text "JMPN[1]" (rect 192 640 234 657)(font "Intel Clear" ))
-	(pt 184 656)
-	(pt 240 656)
-)
-(connector
 	(text "PC_CLRN" (rect 312 632 359 649)(font "Intel Clear" ))
 	(pt 376 648)
 	(pt 304 648)
-)
-(connector
-	(text "JMPN[1]" (rect 192 584 234 601)(font "Intel Clear" ))
-	(pt 184 600)
-	(pt 240 600)
-)
-(connector
-	(text "JMPN[0]" (rect 192 568 234 585)(font "Intel Clear" ))
-	(pt 184 584)
-	(pt 240 584)
 )
 (connector
 	(text "REG_CLRN" (rect 312 576 365 593)(font "Intel Clear" ))
@@ -881,13 +831,64 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 592 304)
-	(pt 488 304)
-	(bus)
-)
-(connector
 	(text "MEM_CONTENTS[3..0]" (rect 498 248 605 265)(font "Intel Clear" ))
 	(pt 592 264)
 	(pt 488 264)
 	(bus)
+)
+(connector
+	(text "MEM_CONTENTS[3..0]" (rect 498 272 605 289)(font "Intel Clear" ))
+	(pt 592 288)
+	(pt 488 288)
+	(bus)
+)
+(connector
+	(text "TON[1]" (rect 192 392 226 409)(font "Intel Clear" ))
+	(pt 184 408)
+	(pt 240 408)
+)
+(connector
+	(text "TO[0]" (rect 192 408 219 425)(font "Intel Clear" ))
+	(pt 184 424)
+	(pt 240 424)
+)
+(connector
+	(text "TO[1]" (rect 192 480 219 497)(font "Intel Clear" ))
+	(pt 184 496)
+	(pt 240 496)
+)
+(connector
+	(text "TON[0]" (rect 192 496 226 513)(font "Intel Clear" ))
+	(pt 184 512)
+	(pt 240 512)
+)
+(connector
+	(text "JMPN[1]" (rect 192 568 234 585)(font "Intel Clear" ))
+	(pt 184 584)
+	(pt 240 584)
+)
+(connector
+	(text "JMPN[0]" (rect 192 584 234 601)(font "Intel Clear" ))
+	(pt 184 600)
+	(pt 240 600)
+)
+(connector
+	(text "JMP[1]" (rect 192 624 227 641)(font "Intel Clear" ))
+	(pt 184 640)
+	(pt 240 640)
+)
+(connector
+	(text "JMPN[0]" (rect 192 640 234 657)(font "Intel Clear" ))
+	(pt 184 656)
+	(pt 240 656)
+)
+(connector
+	(text "JMP[1]" (rect 192 680 227 697)(font "Intel Clear" ))
+	(pt 184 696)
+	(pt 240 696)
+)
+(connector
+	(text "JMP[0]" (rect 192 696 227 713)(font "Intel Clear" ))
+	(pt 184 712)
+	(pt 240 712)
 )

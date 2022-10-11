@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Oct  6 14:11:12 2022
+Fitter Status : Successful - Tue Oct 11 17:09:20 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : MiniCPU
 Top-level Entity Name : MiniCPU
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 44 / 18,480 ( < 1 % )
-Total registers : 26
-Total pins : 40 / 224 ( 18 % )
+Logic utilization (in ALMs) : 64 / 18,480 ( < 1 % )
+Total registers : 34
+Total pins : 59 / 224 ( 26 % )
 Total virtual pins : 0
 Total block memory bits : 4,096 / 3,153,920 ( < 1 % )
 Total RAM Blocks : 1 / 308 ( < 1 % )
