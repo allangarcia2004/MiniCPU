@@ -8,6 +8,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "MEM_CONTENTS[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[0]",
+					"strict" : false
+				},
+				{
 					"name" : "COUNTER[7]",
 					"strict" : false
 				},
@@ -40,6 +104,50 @@
 					"strict" : false
 				},
 				{
+					"name" : "PC_LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "PC_CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_CLRN",
+					"strict" : false
+				},
+				{
 					"name" : "ULA_S[3]",
 					"strict" : false
 				},
@@ -53,6 +161,70 @@
 				},
 				{
 					"name" : "ULA_S[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_Op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_Op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OPERAND[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "R2_CLRN",
 					"strict" : false
 				},
 				{

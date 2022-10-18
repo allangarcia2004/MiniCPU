@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 320 264 488 280)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Op" (rect 5 0 20 12)(font "Arial" ))
+	(text "Op" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -430,4 +430,13 @@ https://fpgasoftware.intel.com/eula.
 	(text "MULT[0]" (rect 424 600 465 617)(font "Intel Clear" ))
 	(pt 464 616)
 	(pt 416 616)
+)
+(connector
+	(pt 664 504)
+	(pt 664 528)
+)
+(connector
+	(text "Op" (rect 691 512 705 529)(font "Intel Clear" ))
+	(pt 664 528)
+	(pt 704 528)
 )

@@ -8,30 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "TON[1]",
-					"strict" : false
-				},
-				{
-					"name" : "TON[0]",
-					"strict" : false
-				},
-				{
-					"name" : "TO[1]",
-					"strict" : false
-				},
-				{
-					"name" : "TO[0]",
-					"strict" : false
-				},
-				{
-					"name" : "JMPN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "JMPN[0]",
-					"strict" : false
-				},
-				{
 					"name" : "REG_1_CLRN",
 					"strict" : false
 				},
@@ -48,31 +24,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "JMP[1]",
-					"strict" : false
-				},
-				{
-					"name" : "JMP[0]",
-					"strict" : false
-				},
-				{
 					"name" : "PC_CLRN",
-					"strict" : false
-				},
-				{
-					"name" : "IN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[0]",
-					"strict" : false
-				},
-				{
-					"name" : "INN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "INN[0]",
 					"strict" : false
 				},
 				{
@@ -148,14 +100,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[13]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_CONTENTS[12]",
-					"strict" : false
-				},
-				{
 					"name" : "MEM_CONTENTS[3]",
 					"strict" : false
 				},
@@ -181,6 +125,14 @@
 				},
 				{
 					"name" : "REG_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM_CONTENTS[12]",
 					"strict" : false
 				},
 				{

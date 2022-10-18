@@ -24,39 +24,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
 					"name" : "Op[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "OPERAND[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "REGISTER[2]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "OPERAND[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "REGISTER[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "OPERAND[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "REGISTER[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OPERAND[3]",
 					"strict" : false
 				}
 			]

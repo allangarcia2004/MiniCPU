@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 416 248 584 264)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Op[1..0]" (rect 5 0 43 17)(font "Intel Clear" ))
+	(text "Op[1..0]" (rect 5 0 42 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -227,23 +227,8 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "Op[0]" (rect 408 560 435 577)(font "Intel Clear" ))
-	(pt 456 576)
-	(pt 400 576)
-)
-(connector
-	(text "Op[0]" (rect 408 384 435 401)(font "Intel Clear" ))
-	(pt 456 400)
-	(pt 400 400)
-)
-(connector
 	(pt 736 496)
 	(pt 736 536)
-)
-(connector
-	(text "Op[1]" (rect 679 520 706 537)(font "Intel Clear" ))
-	(pt 736 536)
-	(pt 664 536)
 )
 (connector
 	(text "S[3..0]" (rect 856 448 885 465)(font "Intel Clear" ))
@@ -268,4 +253,19 @@ https://fpgasoftware.intel.com/eula.
 	(pt 456 560)
 	(pt 384 560)
 	(bus)
+)
+(connector
+	(text "Op[1]" (rect 408 384 435 401)(font "Intel Clear" ))
+	(pt 456 400)
+	(pt 400 400)
+)
+(connector
+	(text "Op[1]" (rect 408 560 435 577)(font "Intel Clear" ))
+	(pt 456 576)
+	(pt 400 576)
+)
+(connector
+	(text "Op[0]" (rect 679 520 706 537)(font "Intel Clear" ))
+	(pt 736 536)
+	(pt 664 536)
 )

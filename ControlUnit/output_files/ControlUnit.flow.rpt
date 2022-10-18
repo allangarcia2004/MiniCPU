@@ -1,5 +1,5 @@
 Flow report for ControlUnit
-Tue Oct 11 16:45:51 2022
+Tue Oct 18 14:12:29 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct 11 16:45:51 2022       ;
+; Flow Status                     ; Successful - Tue Oct 18 14:12:29 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; ControlUnit                                 ;
 ; Top-level Entity Name           ; ControlUnit                                 ;
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 56                                          ;
+; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/11/2022 16:45:40 ;
+; Start date & time ; 10/18/2022 14:12:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ControlUnit         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 123719794039208.166551754007892        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 123719794343906.166611314005656        ; --            ; --          ; --         ;
 ; MISC_FILE                           ; MUX_4x4.bsf                            ; --            ; --          ; --         ;
 ; MISC_FILE                           ; MUX_4x4_bb.v                           ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,10 +94,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4827 MB             ; 00:00:18                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4827 MB             ; 00:00:19                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,9 +104,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; 6-305-04         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -116,8 +112,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off ControlUnit -c ControlUnit
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ControlUnit -c ControlUnit --vector_source=C:/Users/13731222/Desktop/allan/MiniCPU/ControlUnit/Waveform.vwf --testbench_file=C:/Users/13731222/Desktop/allan/MiniCPU/ControlUnit/simulation/qsim/Waveform.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/13731222/Desktop/allan/MiniCPU/ControlUnit/simulation/qsim/ ControlUnit -c ControlUnit
 
 
 

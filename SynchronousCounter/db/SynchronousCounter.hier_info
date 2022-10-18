@@ -1,27 +1,79 @@
 |SynchronousCounter
-Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= inst71.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= OverwritableTFF:inst1.Q
+Q[1] <= OverwritableTFF:inst18.Q
+Q[2] <= OverwritableTFF:inst19.Q
+Q[3] <= OverwritableTFF:inst20.Q
 Q[4] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 Q[5] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 Q[6] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
-CLR => inst.ACLR
-CLR => inst3.ACLR
-CLR => inst5.ACLR
-CLR => inst71.ACLR
-CLR => inst7.ACLR
-CLR => inst10.ACLR
-CLR => inst12.ACLR
-CLR => inst14.ACLR
-CLK => inst.CLK
-CLK => inst3.CLK
-CLK => inst5.CLK
-CLK => inst71.CLK
+D[0] => OverwritableTFF:inst1.D
+D[1] => OverwritableTFF:inst18.D
+D[2] => OverwritableTFF:inst19.D
+D[3] => OverwritableTFF:inst20.D
+LOAD => OverwritableTFF:inst1.LOAD
+LOAD => OverwritableTFF:inst18.LOAD
+LOAD => OverwritableTFF:inst19.LOAD
+LOAD => OverwritableTFF:inst20.LOAD
+CLK => OverwritableTFF:inst1.CLK
+CLK => OverwritableTFF:inst18.CLK
+CLK => OverwritableTFF:inst19.CLK
+CLK => OverwritableTFF:inst20.CLK
 CLK => inst7.CLK
 CLK => inst10.CLK
 CLK => inst12.CLK
 CLK => inst14.CLK
+CLRN => OverwritableTFF:inst1.CLRN
+CLRN => OverwritableTFF:inst18.CLRN
+CLRN => OverwritableTFF:inst19.CLRN
+CLRN => OverwritableTFF:inst20.CLRN
+CLRN => inst7.ACLR
+CLRN => inst10.ACLR
+CLRN => inst12.ACLR
+CLRN => inst14.ACLR
+
+
+|SynchronousCounter|OverwritableTFF:inst1
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => instA1.IN0
+LOAD => instA12.IN0
+D => instA1.IN1
+D => instA13.IN1
+CLRN => instA14.IN0
+PREV => inst.IN0
+CLK => inst.CLK
+
+
+|SynchronousCounter|OverwritableTFF:inst18
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => instA1.IN0
+LOAD => instA12.IN0
+D => instA1.IN1
+D => instA13.IN1
+CLRN => instA14.IN0
+PREV => inst.IN0
+CLK => inst.CLK
+
+
+|SynchronousCounter|OverwritableTFF:inst19
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => instA1.IN0
+LOAD => instA12.IN0
+D => instA1.IN1
+D => instA13.IN1
+CLRN => instA14.IN0
+PREV => inst.IN0
+CLK => inst.CLK
+
+
+|SynchronousCounter|OverwritableTFF:inst20
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LOAD => instA1.IN0
+LOAD => instA12.IN0
+D => instA1.IN1
+D => instA13.IN1
+CLRN => instA14.IN0
+PREV => inst.IN0
+CLK => inst.CLK
 
 

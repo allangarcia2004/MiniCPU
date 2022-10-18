@@ -1,0 +1,17 @@
+|Register4Bit
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst4.ACLR
+CLRN => inst.ACLR
+CLRN => inst3.ACLR
+CLRN => inst5.ACLR
+LOAD => inst1.IN0
+CLK => inst1.IN1
+D[0] => inst.DATAIN
+D[1] => inst3.DATAIN
+D[2] => inst4.DATAIN
+D[3] => inst5.DATAIN
+
+

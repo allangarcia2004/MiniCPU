@@ -1,5 +1,21 @@
 |MiniCPU
 R1_LOAD <= ControlUnit:inst9.REG_1_LOAD
+MEM_CONTENTS[0] <= ROM_256x16:inst1.q[0]
+MEM_CONTENTS[1] <= ROM_256x16:inst1.q[1]
+MEM_CONTENTS[2] <= ROM_256x16:inst1.q[2]
+MEM_CONTENTS[3] <= ROM_256x16:inst1.q[3]
+MEM_CONTENTS[4] <= ROM_256x16:inst1.q[4]
+MEM_CONTENTS[5] <= ROM_256x16:inst1.q[5]
+MEM_CONTENTS[6] <= ROM_256x16:inst1.q[6]
+MEM_CONTENTS[7] <= ROM_256x16:inst1.q[7]
+MEM_CONTENTS[8] <= ROM_256x16:inst1.q[8]
+MEM_CONTENTS[9] <= ROM_256x16:inst1.q[9]
+MEM_CONTENTS[10] <= ROM_256x16:inst1.q[10]
+MEM_CONTENTS[11] <= ROM_256x16:inst1.q[11]
+MEM_CONTENTS[12] <= ROM_256x16:inst1.q[12]
+MEM_CONTENTS[13] <= ROM_256x16:inst1.q[13]
+MEM_CONTENTS[14] <= ROM_256x16:inst1.q[14]
+MEM_CONTENTS[15] <= ROM_256x16:inst1.q[15]
 CLK_FPGA => debouncer:inst2.clk_fpga
 RST_DEBOUNCER => debouncer:inst2.rst_debouncer
 INPUT_CLK => debouncer:inst2.input_key
@@ -11,11 +27,40 @@ COUNTER[4] <= SynchronousCounter:inst.Q[4]
 COUNTER[5] <= SynchronousCounter:inst.Q[5]
 COUNTER[6] <= SynchronousCounter:inst.Q[6]
 COUNTER[7] <= SynchronousCounter:inst.Q[7]
-CLR_GLOBAL => SynchronousCounter:inst.CLRN
+PC_LOAD <= ControlUnit:inst9.PC_LOAD
+CLR_GLOBAL => inst10.IN0
+CLR_GLOBAL => inst4.IN0
+CLR_GLOBAL => inst5.IN0
+PC_CLRN <= ControlUnit:inst9.PC_CLRN
+PC_D[0] <= ControlUnit:inst9.PC_D[0]
+PC_D[1] <= ControlUnit:inst9.PC_D[1]
+PC_D[2] <= ControlUnit:inst9.PC_D[2]
+PC_D[3] <= ControlUnit:inst9.PC_D[3]
+R1[0] <= Register4Bit:inst14.Q[0]
+R1[1] <= Register4Bit:inst14.Q[1]
+R1[2] <= Register4Bit:inst14.Q[2]
+R1[3] <= Register4Bit:inst14.Q[3]
+R1_CLRN <= ControlUnit:inst9.REG_1_CLRN
 ULA_S[0] <= ArithmeticLogicUnit:inst11.S[0]
 ULA_S[1] <= ArithmeticLogicUnit:inst11.S[1]
 ULA_S[2] <= ArithmeticLogicUnit:inst11.S[2]
 ULA_S[3] <= ArithmeticLogicUnit:inst11.S[3]
+ULA_Op[0] <= ControlUnit:inst9.ULA_Op[0]
+ULA_Op[1] <= ControlUnit:inst9.ULA_Op[1]
+ULA_OPERAND[0] <= ControlUnit:inst9.ULA_OPERAND[0]
+ULA_OPERAND[1] <= ControlUnit:inst9.ULA_OPERAND[1]
+ULA_OPERAND[2] <= ControlUnit:inst9.ULA_OPERAND[2]
+ULA_OPERAND[3] <= ControlUnit:inst9.ULA_OPERAND[3]
+ULA_REGISTER[0] <= ControlUnit:inst9.ULA_REGISTER[0]
+ULA_REGISTER[1] <= ControlUnit:inst9.ULA_REGISTER[1]
+ULA_REGISTER[2] <= ControlUnit:inst9.ULA_REGISTER[2]
+ULA_REGISTER[3] <= ControlUnit:inst9.ULA_REGISTER[3]
+R2[0] <= Register4Bit:inst15.Q[0]
+R2[1] <= Register4Bit:inst15.Q[1]
+R2[2] <= Register4Bit:inst15.Q[2]
+R2[3] <= Register4Bit:inst15.Q[3]
+R2_LOAD <= ControlUnit:inst9.REG_2_LOAD
+R2_CLRN <= ControlUnit:inst9.REG_2_CLRN
 MEM_OUT_0[0] <= BUS_7SegmentsDisplay:inst8.S[0]
 MEM_OUT_0[1] <= BUS_7SegmentsDisplay:inst8.S[1]
 MEM_OUT_0[2] <= BUS_7SegmentsDisplay:inst8.S[2]
@@ -79,6 +124,7 @@ MEM_CONTENTS[9] => ULA_Op[1].DATAIN
 MEM_CONTENTS[10] => inst12[0].IN0
 MEM_CONTENTS[10] => inst8.IN1
 MEM_CONTENTS[11] => inst12[1].IN0
+MEM_CONTENTS[11] => inst1an.IN1
 MEM_CONTENTS[11] => inst8.IN0
 MEM_CONTENTS[11] => inst10.IN1
 MEM_CONTENTS[12] => MUX_4x4:inst5.sel[0]
@@ -87,9 +133,9 @@ MEM_CONTENTS[14] => inst15[0].IN0
 MEM_CONTENTS[14] => inst17.IN1
 MEM_CONTENTS[15] => inst15[1].IN0
 MEM_CONTENTS[15] => inst18.IN0
-REG_1_CLRN <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+REG_1_CLRN <= inst1an.DB_MAX_OUTPUT_PORT_TYPE
 REG_2_LOAD <= inst18.DB_MAX_OUTPUT_PORT_TYPE
-REG_2_CLRN <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+REG_2_CLRN <= inst1an.DB_MAX_OUTPUT_PORT_TYPE
 PC_LOAD <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 PC_CLRN <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 PC_D[0] <= MEM_CONTENTS[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -216,7 +262,7 @@ sel[1] => l2_w3_n0_mux_dataout.IN0
 sel[1] => _.IN0
 
 
-|MiniCPU|ROM_16x256:inst1
+|MiniCPU|ROM_256x16:inst1
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -244,7 +290,7 @@ q[14] <= altsyncram:altsyncram_component.q_a
 q[15] <= altsyncram:altsyncram_component.q_a
 
 
-|MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component
+|MiniCPU|ROM_256x16:inst1|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -266,18 +312,18 @@ data_a[13] => ~NO_FANOUT~
 data_a[14] => ~NO_FANOUT~
 data_a[15] => ~NO_FANOUT~
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_ddg1:auto_generated.address_a[0]
-address_a[1] => altsyncram_ddg1:auto_generated.address_a[1]
-address_a[2] => altsyncram_ddg1:auto_generated.address_a[2]
-address_a[3] => altsyncram_ddg1:auto_generated.address_a[3]
-address_a[4] => altsyncram_ddg1:auto_generated.address_a[4]
-address_a[5] => altsyncram_ddg1:auto_generated.address_a[5]
-address_a[6] => altsyncram_ddg1:auto_generated.address_a[6]
-address_a[7] => altsyncram_ddg1:auto_generated.address_a[7]
+address_a[0] => altsyncram_oog1:auto_generated.address_a[0]
+address_a[1] => altsyncram_oog1:auto_generated.address_a[1]
+address_a[2] => altsyncram_oog1:auto_generated.address_a[2]
+address_a[3] => altsyncram_oog1:auto_generated.address_a[3]
+address_a[4] => altsyncram_oog1:auto_generated.address_a[4]
+address_a[5] => altsyncram_oog1:auto_generated.address_a[5]
+address_a[6] => altsyncram_oog1:auto_generated.address_a[6]
+address_a[7] => altsyncram_oog1:auto_generated.address_a[7]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_ddg1:auto_generated.clock0
+clock0 => altsyncram_oog1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -287,29 +333,29 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_ddg1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_ddg1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_ddg1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_ddg1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_ddg1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_ddg1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_ddg1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_ddg1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_ddg1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_ddg1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_ddg1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_ddg1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_ddg1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_ddg1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_ddg1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_ddg1:auto_generated.q_a[15]
+q_a[0] <= altsyncram_oog1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_oog1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_oog1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_oog1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_oog1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_oog1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_oog1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_oog1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_oog1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_oog1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_oog1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_oog1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_oog1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_oog1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_oog1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_oog1:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|MiniCPU|ROM_16x256:inst1|altsyncram:altsyncram_component|altsyncram_ddg1:auto_generated
+|MiniCPU|ROM_256x16:inst1|altsyncram:altsyncram_component|altsyncram_oog1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -595,7 +641,7 @@ PREV => inst.IN0
 CLK => inst.CLK
 
 
-|MiniCPU|4BitRegister:inst4
+|MiniCPU|Register4Bit:inst14
 Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
@@ -617,9 +663,9 @@ S[0] <= MUX_2x1:inst3.result[0]
 S[1] <= MUX_2x1:inst3.result[1]
 S[2] <= MUX_2x1:inst3.result[2]
 S[3] <= MUX_2x1:inst3.result[3]
-Op[0] => AdderSubtractor:inst2.Op
-Op[0] => DividerMultiplier:inst.Op
-Op[1] => MUX_2x1:inst3.sel
+Op[0] => MUX_2x1:inst3.sel
+Op[1] => AdderSubtractor:inst2.Op
+Op[1] => DividerMultiplier:inst.Op
 REGISTER[0] => AdderSubtractor:inst2.A[0]
 REGISTER[1] => AdderSubtractor:inst2.A[1]
 REGISTER[2] => AdderSubtractor:inst2.A[2]
@@ -772,13 +818,13 @@ S[0] <= MUX_2x1:inst1.result[0]
 S[1] <= MUX_2x1:inst1.result[1]
 S[2] <= MUX_2x1:inst1.result[2]
 S[3] <= MUX_2x1:inst1.result[3]
+Op => MUX_2x1:inst1.sel
 A[0] => MUX_2x1:inst1.data0x[1]
 A[1] => MUX_2x1:inst1.data0x[2]
 A[1] => MUX_2x1:inst1.data1x[0]
 A[2] => MUX_2x1:inst1.data0x[3]
 A[2] => MUX_2x1:inst1.data1x[1]
 A[3] => MUX_2x1:inst1.data1x[2]
-Op => ~NO_FANOUT~
 
 
 |MiniCPU|ArithmeticLogicUnit:inst11|DividerMultiplier:inst|MUX_2x1:inst1
@@ -839,7 +885,7 @@ sel[0] => l1_w3_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|MiniCPU|4BitRegister:inst10
+|MiniCPU|Register4Bit:inst15
 Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE

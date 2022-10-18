@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ControlUnit
-Tue Oct 11 16:45:48 2022
+Tue Oct 18 14:12:29 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -45,14 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 11 16:45:48 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 18 14:12:29 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; ControlUnit                                 ;
 ; Top-level Entity Name           ; ControlUnit                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 56                                          ;
+; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -200,14 +200,14 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                        ;
 ; Dedicated logic registers                   ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 56                     ;
+; I/O pins                                    ; 44                     ;
 ;                                             ;                        ;
 ; Total DSP Blocks                            ; 0                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; MEM_CONTENTS[11]~input ;
-; Maximum fan-out                             ; 7                      ;
-; Total fan-out                               ; 118                    ;
-; Average fan-out                             ; 0.98                   ;
+; Maximum fan-out                             ; 5                      ;
+; Total fan-out                               ; 94                     ;
+; Average fan-out                             ; 0.97                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -216,7 +216,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Entity Name ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------+-------------+--------------+
-; |ControlUnit                      ; 9 (5)               ; 0 (0)                     ; 0                 ; 0          ; 56   ; 0            ; |ControlUnit                                                                ; ControlUnit ; work         ;
+; |ControlUnit                      ; 9 (5)               ; 0 (0)                     ; 0                 ; 0          ; 44   ; 0            ; |ControlUnit                                                                ; ControlUnit ; work         ;
 ;    |MUX_4x4:inst5|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ControlUnit|MUX_4x4:inst5                                                  ; MUX_4x4     ; work         ;
 ;       |lpm_mux:LPM_MUX_component| ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ControlUnit|MUX_4x4:inst5|lpm_mux:LPM_MUX_component                        ; lpm_mux     ; work         ;
 ;          |mux_vjc:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ControlUnit|MUX_4x4:inst5|lpm_mux:LPM_MUX_component|mux_vjc:auto_generated ; mux_vjc     ; work         ;
@@ -272,15 +272,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 17                          ;
-;     normal            ; 17                          ;
-;         1 data inputs ; 8                           ;
+; arriav_lcell_comb     ; 10                          ;
+;     normal            ; 10                          ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 3                           ;
 ;         4 data inputs ; 6                           ;
-; boundary_port         ; 56                          ;
+; boundary_port         ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Average LUT depth     ; 0.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -299,7 +299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Oct 11 16:45:40 2022
+    Info: Processing started: Tue Oct 18 14:12:20 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ControlUnit -c ControlUnit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -308,6 +308,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
 Info (12021): Found 1 design units, including 1 entities, in source file mux_4x4.v
     Info (12023): Found entity 1: MUX_4x4 File: C:/Users/13731222/Desktop/allan/MiniCPU/ControlUnit/MUX_4x4.v Line: 40
 Info (12127): Elaborating entity "ControlUnit" for the top level hierarchy
+Warning (275008): Primitive "NOT" of instance "inst14" not used
 Info (12128): Elaborating entity "MUX_4x4" for hierarchy "MUX_4x4:inst5"
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "MUX_4x4:inst5|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/ControlUnit/MUX_4x4.v Line: 73
 Info (12130): Elaborated megafunction instantiation "MUX_4x4:inst5|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/ControlUnit/MUX_4x4.v Line: 73
@@ -327,14 +328,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MEM_CONTENTS[6]"
     Warning (15610): No output dependent on input pin "MEM_CONTENTS[5]"
     Warning (15610): No output dependent on input pin "MEM_CONTENTS[4]"
-Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
-    Info (21059): Implemented 32 output pins
+    Info (21059): Implemented 20 output pins
     Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Tue Oct 11 16:45:48 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Tue Oct 18 14:12:29 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 

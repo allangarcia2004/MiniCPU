@@ -40,7 +40,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLR",
+					"name" : "CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "D[0]",
 					"strict" : false
 				}
 			]

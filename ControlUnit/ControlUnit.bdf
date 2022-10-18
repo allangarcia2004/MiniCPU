@@ -614,8 +614,8 @@ https://fpgasoftware.intel.com/eula.
 )
 (symbol
 	(rect 240 568 304 616)
-	(text "NAND2" (rect 1 0 32 10)(font "Arial" (font_size 6)))
-	(text "inst11" (rect 3 37 31 54)(font "Intel Clear" ))
+	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
+	(text "inst1an" (rect 3 37 37 54)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -635,14 +635,14 @@ https://fpgasoftware.intel.com/eula.
 		(output)
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
 		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
-		(line (pt 52 24)(pt 64 24))
+		(line (pt 48 24)(pt 64 24))
 	)
 	(drawing
-		(line (pt 15 37)(pt 32 37))
-		(line (pt 15 12)(pt 32 12))
-		(line (pt 15 36)(pt 15 12))
-		(arc (pt 32 36)(pt 32 12)(rect 20 12 45 37))
-		(circle (rect 44 20 52 28))
+		(line (pt 14 36)(pt 25 36))
+		(line (pt 14 13)(pt 25 13))
+		(arc (pt 7 29)(pt 7 19)(rect -14 8 19 41))
+		(arc (pt 49 24)(pt 25 13)(rect -6 13 57 76))
+		(arc (pt 25 35)(pt 49 24)(rect -6 -27 57 36))
 	)
 )
 (connector
@@ -863,16 +863,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 240 512)
 )
 (connector
-	(text "JMPN[1]" (rect 192 568 234 585)(font "Intel Clear" ))
-	(pt 184 584)
-	(pt 240 584)
-)
-(connector
-	(text "JMPN[0]" (rect 192 584 234 601)(font "Intel Clear" ))
-	(pt 184 600)
-	(pt 240 600)
-)
-(connector
 	(text "JMP[1]" (rect 192 624 227 641)(font "Intel Clear" ))
 	(pt 184 640)
 	(pt 240 640)
@@ -891,4 +881,14 @@ https://fpgasoftware.intel.com/eula.
 	(text "JMP[0]" (rect 192 696 227 713)(font "Intel Clear" ))
 	(pt 184 712)
 	(pt 240 712)
+)
+(connector
+	(text "JMPN[0]" (rect 192 584 234 601)(font "Intel Clear" ))
+	(pt 184 600)
+	(pt 240 600)
+)
+(connector
+	(text "JMP[1]" (rect 192 568 227 585)(font "Intel Clear" ))
+	(pt 184 584)
+	(pt 240 584)
 )

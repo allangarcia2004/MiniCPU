@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ArithmeticLogicUnit
-Tue Oct  4 14:33:21 2022
+Tue Oct 18 14:39:37 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,11 +14,12 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: MUX_2x1:inst3|lpm_mux:LPM_MUX_component
- 10. Parameter Settings for User Entity Instance: DividerMultiplier:inst|MUX_2x1:inst1|lpm_mux:LPM_MUX_component
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: MUX_2x1:inst3|lpm_mux:LPM_MUX_component
+ 11. Parameter Settings for User Entity Instance: DividerMultiplier:inst|MUX_2x1:inst1|lpm_mux:LPM_MUX_component
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct  4 14:33:21 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 18 14:39:37 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; ArithmeticLogicUnit                         ;
 ; Top-level Entity Name           ; ArithmeticLogicUnit                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 15                                          ;
+; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -168,23 +169,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; DividerMultiplier.bdf            ; yes             ; User Block Diagram/Schematic File        ; C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/DividerMultiplier.bdf   ;         ;
-; arithmeticlogicunit.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/arithmeticlogicunit.bdf ;         ;
-; mux_2x1.v                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v               ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf              ;         ;
-; aglobal211.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc           ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc               ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc             ;         ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc             ;         ;
-; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/db/mux_sjc.tdf          ;         ;
-; addersubtractor.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/addersubtractor.bdf     ;         ;
-; 1bitaddersubtractor.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/1bitaddersubtractor.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
+; DividerMultiplier.bdf            ; yes             ; User Block Diagram/Schematic File        ; C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/DividerMultiplier.bdf   ;         ;
+; arithmeticlogicunit.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/arithmeticlogicunit.bdf ;         ;
+; mux_2x1.v                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v               ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc               ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/db/mux_sjc.tdf          ;         ;
+; addersubtractor.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/addersubtractor.bdf     ;         ;
+; 1bitaddersubtractor.bdf          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/1bitaddersubtractor.bdf ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -192,25 +193,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 4           ;
+; Estimate of Logic utilization (ALMs needed) ; 5           ;
 ;                                             ;             ;
 ; Combinational ALUT usage for logic          ; 6           ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 2           ;
+;     -- 7 input functions                    ; 2           ;
+;     -- 6 input functions                    ; 1           ;
 ;     -- 5 input functions                    ; 2           ;
 ;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 2           ;
+;     -- <=3 input functions                  ; 1           ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 15          ;
+; I/O pins                                    ; 14          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; Op[1]~input ;
-; Maximum fan-out                             ; 4           ;
-; Total fan-out                               ; 46          ;
-; Average fan-out                             ; 1.28        ;
+; Maximum fan-out                             ; 5           ;
+; Total fan-out                               ; 50          ;
+; Average fan-out                             ; 1.47        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,7 +220,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name         ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+---------------------+--------------+
-; |ArithmeticLogicUnit              ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |ArithmeticLogicUnit                                                                ; ArithmeticLogicUnit ; work         ;
+; |ArithmeticLogicUnit              ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 14   ; 0            ; |ArithmeticLogicUnit                                                                ; ArithmeticLogicUnit ; work         ;
 ;    |AdderSubtractor:inst2|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ArithmeticLogicUnit|AdderSubtractor:inst2                                          ; AdderSubtractor     ; work         ;
 ;       |1BitAdderSubtractor:inst2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ArithmeticLogicUnit|AdderSubtractor:inst2|1BitAdderSubtractor:inst2                ; 1BitAdderSubtractor ; work         ;
 ;       |1BitAdderSubtractor:inst4| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ArithmeticLogicUnit|AdderSubtractor:inst2|1BitAdderSubtractor:inst4                ; 1BitAdderSubtractor ; work         ;
@@ -243,6 +244,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ArithmeticLogicUnit|MUX_2x1:inst3|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated|l1_w2_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -289,12 +299,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 4                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
 ;         5 data inputs ; 2                           ;
-;         6 data inputs ; 2                           ;
-; boundary_port         ; 15                          ;
+;         6 data inputs ; 1                           ;
+; boundary_port         ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
 ; Average LUT depth     ; 1.69                        ;
@@ -316,7 +327,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Oct  4 14:33:02 2022
+    Info: Processing started: Tue Oct 18 14:39:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ArithmeticLogicUnit -c ArithmeticLogicUnit
 Warning (125092): Tcl Script File MULTIPLEXER/MUX_2x1.qip not found
     Info (125063): set_global_assignment -name QIP_FILE MULTIPLEXER/MUX_2x1.qip
@@ -331,17 +342,17 @@ Warning (12125): Using design file arithmeticlogicunit.bdf, which is not specifi
     Info (12023): Found entity 1: ArithmeticLogicUnit
 Info (12127): Elaborating entity "ArithmeticLogicUnit" for the top level hierarchy
 Warning (12125): Using design file mux_2x1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: MUX_2x1 File: C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 40
+    Info (12023): Found entity 1: MUX_2x1 File: C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 40
 Info (12128): Elaborating entity "MUX_2x1" for hierarchy "MUX_2x1:inst3"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "MUX_2x1:inst3|lpm_mux:LPM_MUX_component" File: C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 69
-Info (12130): Elaborated megafunction instantiation "MUX_2x1:inst3|lpm_mux:LPM_MUX_component" File: C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 69
-Info (12133): Instantiated megafunction "MUX_2x1:inst3|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 69
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "MUX_2x1:inst3|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 69
+Info (12130): Elaborated megafunction instantiation "MUX_2x1:inst3|lpm_mux:LPM_MUX_component" File: C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 69
+Info (12133): Instantiated megafunction "MUX_2x1:inst3|lpm_mux:LPM_MUX_component" with the following parameter: File: C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/mux_2x1.v Line: 69
     Info (12134): Parameter "lpm_size" = "2"
     Info (12134): Parameter "lpm_type" = "LPM_MUX"
     Info (12134): Parameter "lpm_width" = "4"
     Info (12134): Parameter "lpm_widths" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_sjc.tdf
-    Info (12023): Found entity 1: mux_sjc File: C:/Users/TEMP/Desktop/allan/MiniCPU/ArithmeticLogicUnit/db/mux_sjc.tdf Line: 23
+    Info (12023): Found entity 1: mux_sjc File: C:/Users/13731222/Desktop/allan/MiniCPU/ArithmeticLogicUnit/db/mux_sjc.tdf Line: 23
 Info (12128): Elaborating entity "mux_sjc" for hierarchy "MUX_2x1:inst3|lpm_mux:LPM_MUX_component|mux_sjc:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file addersubtractor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: AdderSubtractor
@@ -350,20 +361,17 @@ Warning (12125): Using design file 1bitaddersubtractor.bdf, which is not specifi
     Info (12023): Found entity 1: 1BitAdderSubtractor
 Info (12128): Elaborating entity "1BitAdderSubtractor" for hierarchy "AdderSubtractor:inst2|1BitAdderSubtractor:inst"
 Info (12128): Elaborating entity "DividerMultiplier" for hierarchy "DividerMultiplier:inst"
-Warning (275009): Pin "Op" not connected
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Op[2]"
-Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
+Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Tue Oct  4 14:33:21 2022
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Tue Oct 18 14:39:37 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
