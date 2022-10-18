@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 360 208 528 224)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -151,7 +151,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 296 160 328 176)
+	(rect 352 264 384 280)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
 	(text "inst2" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
 	(port
@@ -316,7 +316,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 200 288 264 336)
+	(rect 688 216 752 264)
 	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "inst1" (rect 3 37 25 54)(font "Intel Clear" ))
 	(port
@@ -348,9 +348,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (connector
-	(text "VCC" (rect 296 174 313 195)(font "Intel Clear" )(vertical))
-	(pt 312 176)
-	(pt 312 208)
+	(text "VCC" (rect 352 278 369 299)(font "Intel Clear" )(vertical))
+	(pt 368 280)
+	(pt 368 312)
 )
 (connector
 	(pt 464 568)
@@ -485,17 +485,17 @@ https://fpgasoftware.intel.com/eula.
 	(pt 608 528)
 )
 (connector
-	(text "CLK" (rect 160 304 180 321)(font "Intel Clear" ))
-	(pt 200 320)
-	(pt 152 320)
+	(text "CLK" (rect 648 232 668 249)(font "Intel Clear" ))
+	(pt 688 248)
+	(pt 640 248)
 )
 (connector
-	(text "LOAD" (rect 160 288 188 305)(font "Intel Clear" ))
-	(pt 200 304)
-	(pt 152 304)
+	(text "LOAD" (rect 648 216 676 233)(font "Intel Clear" ))
+	(pt 688 232)
+	(pt 640 232)
 )
 (connector
-	(text "CLK_ENABLED" (rect 272 296 343 313)(font "Intel Clear" ))
-	(pt 312 312)
-	(pt 264 312)
+	(text "CLK_ENABLED" (rect 760 224 831 241)(font "Intel Clear" ))
+	(pt 800 240)
+	(pt 752 240)
 )
