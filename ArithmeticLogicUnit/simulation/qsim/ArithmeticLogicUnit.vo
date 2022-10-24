@@ -1,0 +1,388 @@
+// Copyright (C) 2021  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
+
+// DATE "10/24/2022 15:08:27"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module ArithmeticLogicUnit (
+	S,
+	Op,
+	REGISTER,
+	OPERAND);
+output 	[3:0] S;
+input 	[1:0] Op;
+input 	[3:0] REGISTER;
+input 	[3:0] OPERAND;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \S[3]~output_o ;
+wire \S[2]~output_o ;
+wire \S[1]~output_o ;
+wire \S[0]~output_o ;
+wire \Op[1]~input_o ;
+wire \Op[0]~input_o ;
+wire \OPERAND[2]~input_o ;
+wire \REGISTER[2]~input_o ;
+wire \OPERAND[1]~input_o ;
+wire \REGISTER[1]~input_o ;
+wire \OPERAND[0]~input_o ;
+wire \REGISTER[0]~input_o ;
+wire \inst2|inst2|inst8~0_combout ;
+wire \REGISTER[3]~input_o ;
+wire \OPERAND[3]~input_o ;
+wire \inst2|inst4|inst5~0_combout ;
+wire \inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0_combout ;
+wire \inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0_combout ;
+wire \inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0_combout ;
+wire \inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0_combout ;
+
+
+cyclonev_io_obuf \S[3]~output (
+	.i(\inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\S[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \S[3]~output .bus_hold = "false";
+defparam \S[3]~output .open_drain_output = "false";
+defparam \S[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \S[2]~output (
+	.i(\inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\S[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \S[2]~output .bus_hold = "false";
+defparam \S[2]~output .open_drain_output = "false";
+defparam \S[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \S[1]~output (
+	.i(\inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\S[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \S[1]~output .bus_hold = "false";
+defparam \S[1]~output .open_drain_output = "false";
+defparam \S[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \S[0]~output (
+	.i(\inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\S[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \S[0]~output .bus_hold = "false";
+defparam \S[0]~output .open_drain_output = "false";
+defparam \S[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \Op[1]~input (
+	.i(Op[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\Op[1]~input_o ));
+// synopsys translate_off
+defparam \Op[1]~input .bus_hold = "false";
+defparam \Op[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \Op[0]~input (
+	.i(Op[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\Op[0]~input_o ));
+// synopsys translate_off
+defparam \Op[0]~input .bus_hold = "false";
+defparam \Op[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \OPERAND[2]~input (
+	.i(OPERAND[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\OPERAND[2]~input_o ));
+// synopsys translate_off
+defparam \OPERAND[2]~input .bus_hold = "false";
+defparam \OPERAND[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \REGISTER[2]~input (
+	.i(REGISTER[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\REGISTER[2]~input_o ));
+// synopsys translate_off
+defparam \REGISTER[2]~input .bus_hold = "false";
+defparam \REGISTER[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \OPERAND[1]~input (
+	.i(OPERAND[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\OPERAND[1]~input_o ));
+// synopsys translate_off
+defparam \OPERAND[1]~input .bus_hold = "false";
+defparam \OPERAND[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \REGISTER[1]~input (
+	.i(REGISTER[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\REGISTER[1]~input_o ));
+// synopsys translate_off
+defparam \REGISTER[1]~input .bus_hold = "false";
+defparam \REGISTER[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \OPERAND[0]~input (
+	.i(OPERAND[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\OPERAND[0]~input_o ));
+// synopsys translate_off
+defparam \OPERAND[0]~input .bus_hold = "false";
+defparam \OPERAND[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \REGISTER[0]~input (
+	.i(REGISTER[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\REGISTER[0]~input_o ));
+// synopsys translate_off
+defparam \REGISTER[0]~input .bus_hold = "false";
+defparam \REGISTER[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst2|inst2|inst8~0 (
+// Equation(s):
+// \inst2|inst2|inst8~0_combout  = ( \REGISTER[0]~input_o  & ( (!\REGISTER[1]~input_o  & (\OPERAND[1]~input_o  & ((\OPERAND[0]~input_o ) # (\Op[1]~input_o )))) # (\REGISTER[1]~input_o  & (!\Op[1]~input_o  & ((\OPERAND[0]~input_o ) # (\OPERAND[1]~input_o )))) 
+// ) ) # ( !\REGISTER[0]~input_o  & ( (!\REGISTER[1]~input_o  & (\Op[1]~input_o  & ((\OPERAND[0]~input_o ) # (\OPERAND[1]~input_o )))) # (\REGISTER[1]~input_o  & (\OPERAND[1]~input_o  & ((!\Op[1]~input_o ) # (\OPERAND[0]~input_o )))) ) )
+
+	.dataa(!\Op[1]~input_o ),
+	.datab(!\OPERAND[1]~input_o ),
+	.datac(!\REGISTER[1]~input_o ),
+	.datad(!\OPERAND[0]~input_o ),
+	.datae(!\REGISTER[0]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst2|inst2|inst8~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst2|inst2|inst8~0 .extended_lut = "off";
+defparam \inst2|inst2|inst8~0 .lut_mask = 64'h1253123A1253123A;
+defparam \inst2|inst2|inst8~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_io_ibuf \REGISTER[3]~input (
+	.i(REGISTER[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\REGISTER[3]~input_o ));
+// synopsys translate_off
+defparam \REGISTER[3]~input .bus_hold = "false";
+defparam \REGISTER[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \OPERAND[3]~input (
+	.i(OPERAND[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\OPERAND[3]~input_o ));
+// synopsys translate_off
+defparam \OPERAND[3]~input .bus_hold = "false";
+defparam \OPERAND[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst2|inst4|inst5~0 (
+// Equation(s):
+// \inst2|inst4|inst5~0_combout  = !\REGISTER[3]~input_o  $ (!\OPERAND[3]~input_o )
+
+	.dataa(!\REGISTER[3]~input_o ),
+	.datab(!\OPERAND[3]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst2|inst4|inst5~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst2|inst4|inst5~0 .extended_lut = "off";
+defparam \inst2|inst4|inst5~0 .lut_mask = 64'h6666666666666666;
+defparam \inst2|inst4|inst5~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0 (
+// Equation(s):
+// \inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0_combout  = ( \inst2|inst2|inst8~0_combout  & ( \inst2|inst4|inst5~0_combout  & ( (!\Op[0]~input_o  & (!\OPERAND[2]~input_o  & (!\Op[1]~input_o  $ (\REGISTER[2]~input_o )))) # (\Op[0]~input_o  
+// & (!\Op[1]~input_o  & (\OPERAND[2]~input_o ))) ) ) ) # ( !\inst2|inst2|inst8~0_combout  & ( \inst2|inst4|inst5~0_combout  & ( (!\OPERAND[2]~input_o  & (((!\Op[0]~input_o )))) # (\OPERAND[2]~input_o  & (!\Op[1]~input_o  $ (((!\Op[0]~input_o  & 
+// \REGISTER[2]~input_o ))))) ) ) ) # ( \inst2|inst2|inst8~0_combout  & ( !\inst2|inst4|inst5~0_combout  & ( (!\Op[0]~input_o  & ((!\Op[1]~input_o  $ (!\REGISTER[2]~input_o )) # (\OPERAND[2]~input_o ))) # (\Op[0]~input_o  & (!\Op[1]~input_o  & 
+// (\OPERAND[2]~input_o ))) ) ) ) # ( !\inst2|inst2|inst8~0_combout  & ( !\inst2|inst4|inst5~0_combout  & ( (\OPERAND[2]~input_o  & (!\Op[1]~input_o  $ (((!\Op[0]~input_o  & !\REGISTER[2]~input_o ))))) ) ) )
+
+	.dataa(!\Op[1]~input_o ),
+	.datab(!\Op[0]~input_o ),
+	.datac(!\OPERAND[2]~input_o ),
+	.datad(!\REGISTER[2]~input_o ),
+	.datae(!\inst2|inst2|inst8~0_combout ),
+	.dataf(!\inst2|inst4|inst5~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0 .extended_lut = "off";
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0 .lut_mask = 64'h060A4E8ECAC68242;
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w3_n0_mux_dataout~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0 (
+// Equation(s):
+// \inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0_combout  = ( !\Op[1]~input_o  & ( (!\Op[0]~input_o  & (!\inst2|inst2|inst8~0_combout  $ (!\REGISTER[2]~input_o  $ (((\OPERAND[2]~input_o )))))) # (\Op[0]~input_o  & ((((\OPERAND[1]~input_o 
+// ))))) ) ) # ( \Op[1]~input_o  & ( (!\Op[0]~input_o  & (!\inst2|inst2|inst8~0_combout  $ (!\REGISTER[2]~input_o  $ (((\OPERAND[2]~input_o )))))) # (\Op[0]~input_o  & ((((\OPERAND[3]~input_o ))))) ) )
+
+	.dataa(!\inst2|inst2|inst8~0_combout ),
+	.datab(!\REGISTER[2]~input_o ),
+	.datac(!\OPERAND[3]~input_o ),
+	.datad(!\OPERAND[2]~input_o ),
+	.datae(!\Op[1]~input_o ),
+	.dataf(!\Op[0]~input_o ),
+	.datag(!\OPERAND[1]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0 .extended_lut = "on";
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0 .lut_mask = 64'h669966990F0F0F0F;
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w2_n0_mux_dataout~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0 (
+// Equation(s):
+// \inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0_combout  = ( !\Op[0]~input_o  & ( !\REGISTER[1]~input_o  $ (!\OPERAND[1]~input_o  $ (((\OPERAND[0]~input_o  & (!\REGISTER[0]~input_o  $ (!\Op[1]~input_o )))))) ) ) # ( \Op[0]~input_o  & ( 
+// (((!\Op[1]~input_o  & ((\OPERAND[0]~input_o ))) # (\Op[1]~input_o  & (\OPERAND[2]~input_o )))) ) )
+
+	.dataa(!\REGISTER[0]~input_o ),
+	.datab(!\REGISTER[1]~input_o ),
+	.datac(!\OPERAND[2]~input_o ),
+	.datad(!\OPERAND[0]~input_o ),
+	.datae(!\Op[0]~input_o ),
+	.dataf(!\Op[1]~input_o ),
+	.datag(!\OPERAND[1]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0 .extended_lut = "on";
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0 .lut_mask = 64'h3C6900FF3C960F0F;
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w1_n0_mux_dataout~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0 (
+// Equation(s):
+// \inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0_combout  = ( \REGISTER[0]~input_o  & ( (!\Op[0]~input_o  & (((!\OPERAND[0]~input_o )))) # (\Op[0]~input_o  & (\Op[1]~input_o  & (\OPERAND[1]~input_o ))) ) ) # ( !\REGISTER[0]~input_o  & ( 
+// (!\Op[0]~input_o  & (((\OPERAND[0]~input_o )))) # (\Op[0]~input_o  & (\Op[1]~input_o  & (\OPERAND[1]~input_o ))) ) )
+
+	.dataa(!\Op[1]~input_o ),
+	.datab(!\Op[0]~input_o ),
+	.datac(!\OPERAND[1]~input_o ),
+	.datad(!\OPERAND[0]~input_o ),
+	.datae(!\REGISTER[0]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0 .extended_lut = "off";
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0 .lut_mask = 64'h01CDCD0101CDCD01;
+defparam \inst3|LPM_MUX_component|auto_generated|l1_w0_n0_mux_dataout~0 .shared_arith = "off";
+// synopsys translate_on
+
+assign S[3] = \S[3]~output_o ;
+
+assign S[2] = \S[2]~output_o ;
+
+assign S[1] = \S[1]~output_o ;
+
+assign S[0] = \S[0]~output_o ;
+
+endmodule

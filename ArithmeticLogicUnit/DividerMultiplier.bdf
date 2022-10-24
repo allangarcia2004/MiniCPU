@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 592 368 624 400)
+	(rect 232 288 264 320)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst" (rect 3 21 20 33)(font "Arial" )(invisible))
 	(port
@@ -325,13 +325,13 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (connector
-	(pt 608 368)
-	(pt 608 352)
+	(pt 248 288)
+	(pt 248 272)
 )
 (connector
-	(text "GND" (rect 627 336 648 353)(font "Intel Clear" ))
-	(pt 608 352)
-	(pt 632 352)
+	(text "GND" (rect 267 256 288 273)(font "Intel Clear" ))
+	(pt 248 272)
+	(pt 272 272)
 )
 (connector
 	(text "GND" (rect 328 320 349 337)(font "Intel Clear" ))

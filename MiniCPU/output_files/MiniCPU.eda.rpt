@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MiniCPU
-Tue Oct 18 15:15:47 2022
+Mon Oct 24 15:41:53 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 18 15:15:47 2022 ;
+; EDA Netlist Writer Status ; Successful - Mon Oct 24 15:41:53 2022 ;
 ; Revision Name             ; MiniCPU                               ;
 ; Top-level Entity Name     ; MiniCPU                               ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+-----------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Simulation Generated Files                                                  ;
-+-----------------------------------------------------------------------------+
-; Generated Files                                                             ;
-+-----------------------------------------------------------------------------+
-; C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim//MiniCPU.vo ;
-+-----------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Simulation Generated Files                                                       ;
++----------------------------------------------------------------------------------+
+; Generated Files                                                                  ;
++----------------------------------------------------------------------------------+
+; C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim//MiniCPU.vo ;
++----------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,13 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 18 15:15:46 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/ MiniCPU -c MiniCPU
-Info (204019): Generated file MiniCPU.vo in folder "C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Mon Oct 24 15:41:53 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/ MiniCPU -c MiniCPU
+Info (119006): Selected device 5CEBA4F23C7 for design "MiniCPU"
+Info (204019): Generated file MiniCPU.vo in folder "C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4720 megabytes
-    Info: Processing ended: Tue Oct 18 15:15:47 2022
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Mon Oct 24 15:41:53 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

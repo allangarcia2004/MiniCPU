@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/18/2022 13:57:22"
+// Generated on "10/24/2022 14:54:41"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          SynchronousCounter
 // 
@@ -55,45 +55,57 @@ end
 always
 begin
 	CLK = 1'b0;
-	CLK = #5000 1'b1;
-	#5000;
+	CLK = #20000 1'b1;
+	#20000;
 end 
 
 // CLRN
 initial
 begin
 	CLRN = 1'b0;
-	CLRN = #10000 1'b1;
-	CLRN = #510000 1'b0;
-	CLRN = #10000 1'b1;
+	CLRN = #20000 1'b1;
+	CLRN = #280000 1'b0;
+	CLRN = #20000 1'b1;
 end 
 // D[ 3 ]
 initial
 begin
 	D[3] = 1'b0;
+	D[3] = #130000 1'b1;
+	D[3] = #40000 1'b0;
+	D[3] = #480000 1'b1;
+	D[3] = #40000 1'b0;
 end 
 // D[ 2 ]
 initial
 begin
 	D[2] = 1'b0;
+	D[2] = #650000 1'b1;
+	D[2] = #40000 1'b0;
 end 
 // D[ 1 ]
 initial
 begin
 	D[1] = 1'b0;
+	D[1] = #130000 1'b1;
+	D[1] = #40000 1'b0;
 end 
 // D[ 0 ]
 initial
 begin
-	D[0] = 1'b1;
+	D[0] = 1'b0;
+	D[0] = #650000 1'b1;
+	D[0] = #40000 1'b0;
 end 
 
 // LOAD
 initial
 begin
 	LOAD = 1'b0;
-	LOAD = #620000 1'b1;
-	LOAD = #10000 1'b0;
+	LOAD = #140000 1'b1;
+	LOAD = #20000 1'b0;
+	LOAD = #500000 1'b1;
+	LOAD = #20000 1'b0;
 end 
 endmodule
 

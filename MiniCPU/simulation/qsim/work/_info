@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim
+dC:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim
 vMiniCPU
-Z1 !s110 1666116948
+Z0 !s110 1666636914
 !i10b 1
-!s100 oG>hZLA0>@DcEfhi9LF^A1
-IA0aK:nS]KKf`MOPC0WTKE2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1666116947
+!s100 gR;]iWRHT73o<k6EU7mKG2
+In`ciH<c?h^:=bDDT2@H6X3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim
+w1666636913
 8MiniCPU.vo
 FMiniCPU.vo
 L0 32
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1666116948.000000
+Z4 !s108 1666636914.000000
 !s107 MiniCPU.vo|
 !s90 -work|work|MiniCPU.vo|
 !i113 1
@@ -31,13 +31,13 @@ Z5 o-work work
 Z6 tCvgOpt 0
 n@mini@c@p@u
 vMiniCPU_vlg_vec_tst
-R1
-!i10b 1
-!s100 ch4GWFJCn_NQnBGiOnD^E2
-IZh`UIS_V=PV9b8d@ZS14P3
-R2
 R0
-w1666116946
+!i10b 1
+!s100 M_[B8Q^3[V;9=SmglFDCH3
+IQnlhj_O2<B9AP4KfJWfl@3
+R1
+R2
+w1666636912
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30

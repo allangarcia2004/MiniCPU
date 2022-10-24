@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MiniCPU -c MiniCPU --vector_source="C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/Waveform.vwf" --testbench_file="C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MiniCPU -c MiniCPU --vector_source="C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/Waveform.vwf" --testbench_file="C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/Waveform.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,18 +26,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 18 15:15:45 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MiniCPU -c MiniCPU --vector_source=C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/Waveform.vwf --testbench_file=C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/Waveform.vwf.vt
+    Info: Processing started: Mon Oct 24 15:41:52 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off MiniCPU -c MiniCPU --vector_source=C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/Waveform.vwf --testbench_file=C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/Waveform.vwf.vt
+Info (119006): Selected device 5CEBA4F23C7 for design "MiniCPU"
 
-t bench files
-
-n writing test bench files
-Info (201000): Generated Verilog Test Bench File C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/Waveform.vwf.vt for simulation
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 4716 megabytes
-    Info: Processing ended: Tue Oct 18 15:15:46 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+le when writing test bench files
 
 Completed successfully. 
 
@@ -45,7 +38,7 @@ Completed successfully.
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/" MiniCPU -c MiniCPU
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/" MiniCPU -c MiniCPU
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -64,20 +57,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 18 15:15:46 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/ MiniCPU -c MiniCPU
-Info (204019): Generated file MiniCPU.vo in folder "C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Mon Oct 24 15:41:53 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/ MiniCPU -c MiniCPU
+Info (119006): Selected device 5CEBA4F23C7 for design "MiniCPU"
+Info (204019): Generated file MiniCPU.vo in folder "C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4720 megabytes
-    Info: Processing ended: Tue Oct 18 15:15:47 2022
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Mon Oct 24 15:41:53 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/MiniCPU.do generated.
+C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/MiniCPU.do generated.
 
 Completed successfully. 
 
@@ -97,7 +91,7 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 15:15:48 on Oct 18,2022
+# Start time: 15:41:54 on Oct 24,2022
 # vlog -work work MiniCPU.vo 
 
 # -- Compiling module MiniCPU
@@ -107,12 +101,12 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Top level modules:
 # 	MiniCPU
 
-# End time: 15:15:48 on Oct 18,2022, Elapsed time: 0:00:00
+# End time: 15:41:54 on Oct 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 15:15:48 on Oct 18,2022
+# Start time: 15:41:54 on Oct 24,2022
 # vlog -work work Waveform.vwf.vt 
 
 # -- Compiling module MiniCPU_vlg_vec_tst
@@ -122,18 +116,17 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Top level modules:
 # 	MiniCPU_vlg_vec_tst
 
-# End time: 15:15:48 on Oct 18,2022, Elapsed time: 0:00:00
+# End time: 15:41:54 on Oct 24,2022, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MiniCPU_vlg_vec_tst 
-# Start time: 15:15:48 on Oct 18,2022
+# Start time: 15:41:54 on Oct 24,2022
 # Loading work.MiniCPU_vlg_vec_tst
 # Loading work.MiniCPU
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_lcell_comb
-# Loading cyclonev_ver.cyclonev_clkena
 # Loading altera_ver.dffeas
 # Loading cyclonev_ver.cyclonev_ram_block
 # Loading sv_std.std
@@ -146,23 +139,23 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # after#25
 
-# ** Note: $finish    : Waveform.vwf.vt(91)
+# ** Note: $finish    : Waveform.vwf.vt(81)
 #    Time: 1 us  Iteration: 0  Instance: /MiniCPU_vlg_vec_tst
 
-# End time: 15:15:48 on Oct 18,2022, Elapsed time: 0:00:00
+# End time: 15:41:54 on Oct 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/Waveform.vwf...
+Reading C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/Waveform.vwf...
 
-Reading C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/MiniCPU.msim.vcd...
+Reading C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/MiniCPU.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/13731222/Desktop/allan/MiniCPU/MiniCPU/simulation/qsim/MiniCPU_20221018151548.sim.vwf
+Writing the resulting VWF to C:/Users/13731222/Desktop/allan/novo/MiniCPU/MiniCPU/simulation/qsim/MiniCPU_20221024154154.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 18 13:57:21 2022
+    Info: Processing started: Mon Oct 24 14:54:40 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SynchronousCounter -c SynchronousCounter --vector_source=C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/Waveform.vwf --testbench_file=C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qsim/Waveform.vwf.vt
 Info (119006): Selected device 5CEBA4F23C7 for design "SynchronousCounter"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -56,14 +56,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 18 13:57:22 2022
+    Info: Processing started: Mon Oct 24 14:54:41 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qsim/ SynchronousCounter -c SynchronousCounter
 Info (119006): Selected device 5CEBA4F23C7 for design "SynchronousCounter"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file SynchronousCounter.vo in folder "C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Tue Oct 18 13:57:23 2022
+    Info: Processing ended: Mon Oct 24 14:54:42 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -91,7 +91,7 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 13:57:24 on Oct 18,2022
+# Start time: 14:54:43 on Oct 24,2022
 # vlog -work work SynchronousCounter.vo 
 
 # -- Compiling module SynchronousCounter
@@ -101,12 +101,12 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Top level modules:
 # 	SynchronousCounter
 
-# End time: 13:57:24 on Oct 18,2022, Elapsed time: 0:00:00
+# End time: 14:54:43 on Oct 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 13:57:24 on Oct 18,2022
+# Start time: 14:54:43 on Oct 24,2022
 # vlog -work work Waveform.vwf.vt 
 
 # -- Compiling module SynchronousCounter_vlg_vec_tst
@@ -116,12 +116,12 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Top level modules:
 # 	SynchronousCounter_vlg_vec_tst
 
-# End time: 13:57:24 on Oct 18,2022, Elapsed time: 0:00:00
+# End time: 14:54:43 on Oct 24,2022, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.SynchronousCounter_vlg_vec_tst 
-# Start time: 13:57:24 on Oct 18,2022
+# Start time: 14:54:43 on Oct 24,2022
 # Loading work.SynchronousCounter_vlg_vec_tst
 # Loading work.SynchronousCounter
 # Loading cyclonev_ver.cyclonev_io_obuf
@@ -135,7 +135,7 @@ Reading C:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # ** Note: $finish    : Waveform.vwf.vt(51)
 #    Time: 1 us  Iteration: 0  Instance: /SynchronousCounter_vlg_vec_tst
 
-# End time: 13:57:24 on Oct 18,2022, Elapsed time: 0:00:00
+# End time: 14:54:43 on Oct 24,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -148,7 +148,7 @@ Reading C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qs
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qsim/SynchronousCounter_20221018135724.sim.vwf
+Writing the resulting VWF to C:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qsim/SynchronousCounter_20221024145443.sim.vwf
 
 Finished VCD to VWF conversion.
 

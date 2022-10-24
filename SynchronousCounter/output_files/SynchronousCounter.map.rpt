@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SynchronousCounter
-Tue Oct 18 13:45:51 2022
+Mon Oct 24 14:53:37 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 18 13:45:51 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 24 14:53:37 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; SynchronousCounter                          ;
 ; Top-level Entity Name           ; SynchronousCounter                          ;
@@ -177,44 +177,44 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                ;
-+---------------------------------------------+------------------------------+
-; Resource                                    ; Usage                        ;
-+---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 17                           ;
-;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 30                           ;
-;     -- 7 input functions                    ; 0                            ;
-;     -- 6 input functions                    ; 3                            ;
-;     -- 5 input functions                    ; 2                            ;
-;     -- 4 input functions                    ; 5                            ;
-;     -- <=3 input functions                  ; 20                           ;
-;                                             ;                              ;
-; Dedicated logic registers                   ; 8                            ;
-;                                             ;                              ;
-; I/O pins                                    ; 15                           ;
-;                                             ;                              ;
-; Total DSP Blocks                            ; 0                            ;
-;                                             ;                              ;
-; Maximum fan-out node                        ; OverwritableTFF:inst1|inst~2 ;
-; Maximum fan-out                             ; 9                            ;
-; Total fan-out                               ; 145                          ;
-; Average fan-out                             ; 2.13                         ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 17                          ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 30                          ;
+;     -- 7 input functions                    ; 0                           ;
+;     -- 6 input functions                    ; 3                           ;
+;     -- 5 input functions                    ; 2                           ;
+;     -- 4 input functions                    ; 5                           ;
+;     -- <=3 input functions                  ; 20                          ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 8                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 15                          ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; OverwritableTFF:inst|inst~2 ;
+; Maximum fan-out                             ; 9                           ;
+; Total fan-out                               ; 145                         ;
+; Average fan-out                             ; 2.13                        ;
++---------------------------------------------+-----------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
-; |SynchronousCounter         ; 30 (6)              ; 8 (4)                     ; 0                 ; 0          ; 15   ; 0            ; |SynchronousCounter                        ; SynchronousCounter ; work         ;
-;    |OverwritableTFF:inst18| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst18 ; OverwritableTFF    ; work         ;
-;    |OverwritableTFF:inst19| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst19 ; OverwritableTFF    ; work         ;
-;    |OverwritableTFF:inst1|  ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst1  ; OverwritableTFF    ; work         ;
-;    |OverwritableTFF:inst20| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst20 ; OverwritableTFF    ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+--------------------+--------------+
+; |SynchronousCounter        ; 30 (6)              ; 8 (4)                     ; 0                 ; 0          ; 15   ; 0            ; |SynchronousCounter                       ; SynchronousCounter ; work         ;
+;    |OverwritableTFF:inst1| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst1 ; OverwritableTFF    ; work         ;
+;    |OverwritableTFF:inst2| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst2 ; OverwritableTFF    ; work         ;
+;    |OverwritableTFF:inst3| ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst3 ; OverwritableTFF    ; work         ;
+;    |OverwritableTFF:inst|  ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SynchronousCounter|OverwritableTFF:inst  ; OverwritableTFF    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -269,7 +269,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Oct 18 13:45:42 2022
+    Info: Processing started: Mon Oct 24 14:53:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SynchronousCounter -c SynchronousCounter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -278,13 +278,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file synchro
 Info (12021): Found 1 design units, including 1 entities, in source file overwritabletff.bdf
     Info (12023): Found entity 1: OverwritableTFF
 Info (12127): Elaborating entity "SynchronousCounter" for the top level hierarchy
-Warning (275008): Primitive "GND" of instance "inst17" not used
-Info (12128): Elaborating entity "OverwritableTFF" for hierarchy "OverwritableTFF:inst1"
+Info (12128): Elaborating entity "OverwritableTFF" for hierarchy "OverwritableTFF:inst"
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "OverwritableTFF:inst20|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst20|inst~_emulated" and latch "OverwritableTFF:inst20|inst~1"
-    Warning (13310): Register "OverwritableTFF:inst19|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst19|inst~_emulated" and latch "OverwritableTFF:inst19|inst~1"
-    Warning (13310): Register "OverwritableTFF:inst18|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst18|inst~_emulated" and latch "OverwritableTFF:inst18|inst~1"
+    Warning (13310): Register "OverwritableTFF:inst3|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst3|inst~_emulated" and latch "OverwritableTFF:inst3|inst~1"
+    Warning (13310): Register "OverwritableTFF:inst2|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst2|inst~_emulated" and latch "OverwritableTFF:inst2|inst~1"
     Warning (13310): Register "OverwritableTFF:inst1|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst1|inst~_emulated" and latch "OverwritableTFF:inst1|inst~1"
+    Warning (13310): Register "OverwritableTFF:inst|inst" is converted into an equivalent circuit using register "OverwritableTFF:inst|inst~_emulated" and latch "OverwritableTFF:inst|inst~1"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -292,10 +291,10 @@ Info (21057): Implemented 45 device resources after synthesis - the final resour
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 30 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Tue Oct 18 13:45:51 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Mon Oct 24 14:53:37 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

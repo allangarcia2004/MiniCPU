@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/18/2022 15:15:46"
+// Generated on "10/24/2022 15:41:52"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          MiniCPU
 // 
@@ -31,87 +31,79 @@ module MiniCPU_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg CLK_FPGA;
-reg CLR_GLOBAL;
+reg CLRN_GLOBAL;
 reg INPUT_CLK;
 reg RST_DEBOUNCER;
 // wires                                               
-wire [7:0] COUNTER;
-wire [15:0] MEM_CONTENTS;
-wire [6:0] MEM_OUT_0;
-wire [6:0] MEM_OUT_1;
-wire [6:0] MEM_OUT_2;
-wire [6:0] MEM_OUT_3;
+wire [15:0] MEMORY;
+wire [6:0] MEMORY_LED_0;
+wire [6:0] MEMORY_LED_1;
+wire [6:0] MEMORY_LED_2;
+wire [6:0] MEMORY_LED_3;
 wire PC_CLRN;
-wire [3:0] PC_D;
 wire PC_LOAD;
-wire [3:0] R1;
-wire R1_CLRN;
+wire [7:0] PC_OUT;
+wire [6:0] R1_LED;
 wire R1_LOAD;
-wire [6:0] R1_OUT;
-wire [3:0] R2;
-wire R2_CLRN;
+wire [3:0] R1_OUT;
+wire [6:0] R2_LED;
 wire R2_LOAD;
-wire [6:0] R2_OUT;
-wire [1:0] ULA_Op;
-wire [3:0] ULA_OPERAND;
+wire [3:0] R2_OUT;
+wire R_CLRN;
 wire [3:0] ULA_REGISTER;
-wire [3:0] ULA_S;
 
 // assign statements (if any)                          
 MiniCPU i1 (
 // port map - connection between master ports and signals/registers   
 	.CLK_FPGA(CLK_FPGA),
-	.CLR_GLOBAL(CLR_GLOBAL),
-	.COUNTER(COUNTER),
+	.CLRN_GLOBAL(CLRN_GLOBAL),
 	.INPUT_CLK(INPUT_CLK),
-	.MEM_CONTENTS(MEM_CONTENTS),
-	.MEM_OUT_0(MEM_OUT_0),
-	.MEM_OUT_1(MEM_OUT_1),
-	.MEM_OUT_2(MEM_OUT_2),
-	.MEM_OUT_3(MEM_OUT_3),
+	.MEMORY(MEMORY),
+	.MEMORY_LED_0(MEMORY_LED_0),
+	.MEMORY_LED_1(MEMORY_LED_1),
+	.MEMORY_LED_2(MEMORY_LED_2),
+	.MEMORY_LED_3(MEMORY_LED_3),
 	.PC_CLRN(PC_CLRN),
-	.PC_D(PC_D),
 	.PC_LOAD(PC_LOAD),
-	.R1(R1),
-	.R1_CLRN(R1_CLRN),
+	.PC_OUT(PC_OUT),
+	.R1_LED(R1_LED),
 	.R1_LOAD(R1_LOAD),
 	.R1_OUT(R1_OUT),
-	.R2(R2),
-	.R2_CLRN(R2_CLRN),
+	.R2_LED(R2_LED),
 	.R2_LOAD(R2_LOAD),
 	.R2_OUT(R2_OUT),
+	.R_CLRN(R_CLRN),
 	.RST_DEBOUNCER(RST_DEBOUNCER),
-	.ULA_Op(ULA_Op),
-	.ULA_OPERAND(ULA_OPERAND),
-	.ULA_REGISTER(ULA_REGISTER),
-	.ULA_S(ULA_S)
+	.ULA_REGISTER(ULA_REGISTER)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// CLR_GLOBAL
+// CLK_FPGA
 initial
 begin
-	CLR_GLOBAL = 1'b0;
-	CLR_GLOBAL = #30000 1'b1;
+	CLK_FPGA = 1'b0;
+end 
+
+// CLRN_GLOBAL
+initial
+begin
+	CLRN_GLOBAL = 1'b0;
+	CLRN_GLOBAL = #20000 1'b1;
 end 
 
 // INPUT_CLK
 initial
 begin
-	INPUT_CLK = 1'b0;
-	INPUT_CLK = #20000 1'b1;
-	# 30000;
-	repeat(15)
+	repeat(33)
 	begin
 		INPUT_CLK = 1'b0;
-		INPUT_CLK = #30000 1'b1;
-		# 30000;
+		INPUT_CLK = #15000 1'b1;
+		# 15000;
 	end
 	INPUT_CLK = 1'b0;
-	INPUT_CLK = #30000 1'b1;
 end 
 
 // RST_DEBOUNCER

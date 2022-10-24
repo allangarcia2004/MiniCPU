@@ -27,8 +27,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 32)
 		(input)
-		(text "PREV" (rect 0 0 31 19)(font "Intel Clear" (font_size 8)))
-		(text "PREV" (rect 21 27 52 46)(font "Intel Clear" (font_size 8)))
+		(text "T" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
+		(text "T" (rect 21 27 29 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port

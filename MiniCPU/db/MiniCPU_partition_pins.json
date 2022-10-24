@@ -4,103 +4,103 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "R1_LOAD",
+					"name" : "R_CLRN",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[15]",
+					"name" : "MEMORY[15]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[14]",
+					"name" : "MEMORY[14]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[13]",
+					"name" : "MEMORY[13]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[12]",
+					"name" : "MEMORY[12]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[11]",
+					"name" : "MEMORY[11]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[10]",
+					"name" : "MEMORY[10]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[9]",
+					"name" : "MEMORY[9]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[8]",
+					"name" : "MEMORY[8]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[7]",
+					"name" : "MEMORY[7]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[6]",
+					"name" : "MEMORY[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[5]",
+					"name" : "MEMORY[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[4]",
+					"name" : "MEMORY[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[3]",
+					"name" : "MEMORY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[2]",
+					"name" : "MEMORY[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[1]",
+					"name" : "MEMORY[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_CONTENTS[0]",
+					"name" : "MEMORY[0]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[7]",
+					"name" : "PC_OUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[6]",
+					"name" : "PC_OUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[5]",
+					"name" : "PC_OUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[4]",
+					"name" : "PC_OUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[3]",
+					"name" : "PC_OUT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[2]",
+					"name" : "PC_OUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[1]",
+					"name" : "PC_OUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "COUNTER[0]",
+					"name" : "PC_OUT[0]",
 					"strict" : false
 				},
 				{
@@ -112,111 +112,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "PC_D[3]",
-					"strict" : false
-				},
-				{
-					"name" : "PC_D[2]",
-					"strict" : false
-				},
-				{
-					"name" : "PC_D[1]",
-					"strict" : false
-				},
-				{
-					"name" : "PC_D[0]",
-					"strict" : false
-				},
-				{
-					"name" : "R1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "R1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "R1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "R1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "R1_CLRN",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_S[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_S[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_S[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_S[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_Op[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_Op[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_OPERAND[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_OPERAND[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_OPERAND[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_OPERAND[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_REGISTER[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_REGISTER[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_REGISTER[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ULA_REGISTER[0]",
-					"strict" : false
-				},
-				{
-					"name" : "R2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "R2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "R2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "R2[0]",
+					"name" : "R1_LOAD",
 					"strict" : false
 				},
 				{
@@ -224,131 +120,143 @@
 					"strict" : false
 				},
 				{
-					"name" : "R2_CLRN",
+					"name" : "MEMORY_LED_0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[6]",
+					"name" : "MEMORY_LED_0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[5]",
+					"name" : "MEMORY_LED_0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[4]",
+					"name" : "MEMORY_LED_0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[3]",
+					"name" : "MEMORY_LED_0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[2]",
+					"name" : "MEMORY_LED_0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[1]",
+					"name" : "MEMORY_LED_0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_0[0]",
+					"name" : "MEMORY_LED_1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[6]",
+					"name" : "MEMORY_LED_1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[5]",
+					"name" : "MEMORY_LED_1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[4]",
+					"name" : "MEMORY_LED_1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[3]",
+					"name" : "MEMORY_LED_1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[2]",
+					"name" : "MEMORY_LED_1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[1]",
+					"name" : "MEMORY_LED_1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_1[0]",
+					"name" : "MEMORY_LED_2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[6]",
+					"name" : "MEMORY_LED_2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[5]",
+					"name" : "MEMORY_LED_2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[4]",
+					"name" : "MEMORY_LED_2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[3]",
+					"name" : "MEMORY_LED_2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[2]",
+					"name" : "MEMORY_LED_2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[1]",
+					"name" : "MEMORY_LED_2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_2[0]",
+					"name" : "MEMORY_LED_3[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[6]",
+					"name" : "MEMORY_LED_3[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[5]",
+					"name" : "MEMORY_LED_3[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[4]",
+					"name" : "MEMORY_LED_3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[3]",
+					"name" : "MEMORY_LED_3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[2]",
+					"name" : "MEMORY_LED_3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[1]",
+					"name" : "MEMORY_LED_3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_OUT_3[0]",
+					"name" : "R1_LED[6]",
 					"strict" : false
 				},
 				{
-					"name" : "R1_OUT[6]",
+					"name" : "R1_LED[5]",
 					"strict" : false
 				},
 				{
-					"name" : "R1_OUT[5]",
+					"name" : "R1_LED[4]",
 					"strict" : false
 				},
 				{
-					"name" : "R1_OUT[4]",
+					"name" : "R1_LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R1_LED[0]",
 					"strict" : false
 				},
 				{
@@ -368,15 +276,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "R2_OUT[6]",
+					"name" : "ULA_REGISTER[3]",
 					"strict" : false
 				},
 				{
-					"name" : "R2_OUT[5]",
+					"name" : "ULA_REGISTER[2]",
 					"strict" : false
 				},
 				{
-					"name" : "R2_OUT[4]",
+					"name" : "ULA_REGISTER[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_REGISTER[0]",
 					"strict" : false
 				},
 				{
@@ -396,7 +308,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLR_GLOBAL",
+					"name" : "R2_LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R2_LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLRN_GLOBAL",
 					"strict" : false
 				},
 				{

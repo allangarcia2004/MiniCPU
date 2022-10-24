@@ -20,6 +20,10 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +42,10 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -253,9 +261,9 @@ TRANSITION_LIST("CLK")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 100;
-			LEVEL 0 FOR 5.0;
-			LEVEL 1 FOR 5.0;
+			REPEAT = 25;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
 		}
 	}
 }
@@ -265,10 +273,10 @@ TRANSITION_LIST("CLRN")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 510.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 470.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 280.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 680.0;
 	}
 }
 
@@ -277,7 +285,11 @@ TRANSITION_LIST("D[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 130.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 480.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 310.0;
 	}
 }
 
@@ -286,7 +298,9 @@ TRANSITION_LIST("D[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 650.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 310.0;
 	}
 }
 
@@ -295,7 +309,9 @@ TRANSITION_LIST("D[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 130.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 830.0;
 	}
 }
 
@@ -304,7 +320,9 @@ TRANSITION_LIST("D[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 650.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 310.0;
 	}
 }
 
@@ -313,9 +331,11 @@ TRANSITION_LIST("LOAD")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 620.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 370.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -413,7 +433,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "D";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
 	CHILDREN = 3, 4, 5, 6;
@@ -423,7 +443,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "D[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -433,7 +453,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "D[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -443,7 +463,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "D[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -453,7 +473,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "D[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
 	PARENT = 2;

@@ -9,13 +9,13 @@ z2
 cModel Technology
 dC:/Users/13731222/Desktop/allan/SynchronousCounter/simulation/qsim
 vSynchronousCounter
-Z0 !s110 1666112244
+Z0 !s110 1666634083
 !i10b 1
-!s100 ZZY^ig]2XFE7S6NN]gT?>2
-IYhRTQB2N^`R6W`@:CRG@^1
+!s100 >OnhfE2S@LXB3dQz9CVgz0
+IQJRgceJJSNgo=O7P92P;>1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/13731222/Desktop/allan/MiniCPU/SynchronousCounter/simulation/qsim
-w1666112243
+w1666634082
 8SynchronousCounter.vo
 FSynchronousCounter.vo
 L0 32
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1666112244.000000
+Z4 !s108 1666634083.000000
 !s107 SynchronousCounter.vo|
 !s90 -work|work|SynchronousCounter.vo|
 !i113 1
@@ -33,11 +33,11 @@ n@synchronous@counter
 vSynchronousCounter_vlg_vec_tst
 R0
 !i10b 1
-!s100 90afb;2>`fkEK6I?2[9;@3
-IcEZ:PPKjRC9Egz__65fMS2
+!s100 Kh1UZ6:aPjm9ZLOL@oR8c2
+IXYCKzN;anXMW[ndc8:I;c2
 R1
 R2
-w1666112242
+w1666634081
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30
