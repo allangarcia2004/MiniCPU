@@ -1,4 +1,4 @@
-MUX_2x1	MUX_2x1_inst (
+MUX_2x4	MUX_2x4_inst (
 	.data0x ( data0x_sig ),
 	.data1x ( data1x_sig ),
 	.sel ( sel_sig ),

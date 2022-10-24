@@ -14,12 +14,13 @@
 --https://fpgasoftware.intel.com/eula.
 
 
-component MUX_2x1
-	PORT
-	(
-		data0x		: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		data1x		: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		sel		: IN STD_LOGIC ;
-		result		: OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
-	);
-end component;
+FUNCTION MUX_2x4 
+(
+	data0x[3..0],
+	data1x[3..0],
+	sel
+)
+
+RETURNS (
+	result[3..0]
+);

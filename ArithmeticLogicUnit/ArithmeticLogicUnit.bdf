@@ -151,8 +151,8 @@ https://fpgasoftware.intel.com/eula.
 )
 (symbol
 	(rect 664 416 808 496)
-	(text "MUX_2x1" (rect 46 0 110 16)(font "Arial" (font_size 10)))
-	(text "inst3" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "MUX_2x4" (rect 46 0 110 16)(font "Arial" (font_size 10)))
+	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
 		(pt 0 40)
 		(input)

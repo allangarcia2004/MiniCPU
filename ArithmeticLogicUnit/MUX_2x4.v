@@ -4,7 +4,7 @@
 // MODULE: LPM_MUX 
 
 // ============================================================
-// File Name: MUX_2x1.v
+// File Name: MUX_2x4.v
 // Megafunction Name(s):
 // 			LPM_MUX
 //
@@ -37,7 +37,7 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module MUX_2x1 (
+module MUX_2x4 (
 	data0x,
 	data1x,
 	sel,
@@ -95,10 +95,10 @@ endmodule
 // Retrieval info: CONNECT: @data 0 0 4 4 data1x 0 0 4 0
 // Retrieval info: CONNECT: @sel 0 0 1 0 sel 0 0 0 0
 // Retrieval info: CONNECT: result 0 0 4 0 @result 0 0 4 0
-// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x1.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x1.inc TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x1.cmp TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x1.bsf TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x1_inst.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x1_bb.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x4.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x4.inc TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x4.cmp TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x4.bsf TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x4_inst.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL MUX_2x4_bb.v TRUE
 // Retrieval info: LIB_FILE: lpm
